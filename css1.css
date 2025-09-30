@@ -131,3 +131,24 @@ header nav ul li a:hover { color: #fff; }
   color: #000;
 }
 
+/* Footer */
+footer {
+  background-color: #000;       /* Black background */
+  color: #ffeb3b;               /* Gold text */
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  border-top: 2px solid #ffeb3b;  /* Gold top border for style */
+}
+
+footer a {
+  color: #ffeb3b;               /* Gold links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;                  /* White on hover */
+}
+
