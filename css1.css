@@ -275,3 +275,23 @@ footer a {
 footer a:hover {
   color: #00ff00; /* Bright green hover */
 }
+#send-btn {
+  padding: 10px 20px;
+  border: 2px solid #ffeb3b; /* Gold border */
+  background-color: #000;      /* Black background */
+  color: #ffeb3b;              /* Gold text */
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 235, 59, 0.3); /* Subtle gold shadow */
+}
+
+#send-btn:hover {
+  background-color: #ffeb3b;   /* Gold background on hover */
+  color: #000;                 /* Black text on hover */
+  box-shadow: 0 6px 12px rgba(255, 235, 59, 0.5); /* Stronger shadow */
+  transform: translateY(-2px); /* Slight lift */
+}
+
