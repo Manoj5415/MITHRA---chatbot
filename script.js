@@ -1,4 +1,6 @@
 const chatWindow = document.getElementById("chat-window");
+const userInput = document.getElementById("user-input");
+const suggestionsBox = document.getElementById("suggestions");
 
 const healthFAQ = {
   // Greetings
@@ -461,6 +463,35 @@ const healthFAQ = {
   "hydration elderly": "🤖 MITHRA: Drink enough water, monitor urine color, include hydrating foods."
 };
 
+// Simple autocorrect/autocomplete using FAQ keys
+function getSuggestions(text) {
+  const input = text.toLowerCase();
+  const matches = Object.keys(healthFAQ).filter(key => key.startsWith(input));
+  return matches;
+}
+
+// Show autocomplete suggestions
+userInput.addEventListener("input", () => {
+  const value = userInput.value;
+  const suggestions = getSuggestions(value);
+  suggestionsBox.innerHTML = "";
+  if (suggestions.length === 0 || !value) {
+    suggestionsBox.style.display = "none";
+    return;
+  }
+  suggestions.forEach(s => {
+    const div = document.createElement("div");
+    div.className = "suggestion-item";
+    div.innerText = s;
+    div.addEventListener("click", () => {
+      userInput.value = s;
+      suggestionsBox.style.display = "none";
+    });
+    suggestionsBox.appendChild(div);
+  });
+  suggestionsBox.style.display = "block";
+});
+
 // AI fallback using Hugging Face free API
 async function getAIAnswer(question) {
   try {
@@ -488,8 +519,7 @@ async function getAnswer(question) {
 
 // Send message
 async function sendMessage() {
-  const input = document.getElementById("user-input");
-  const userText = input.value.trim();
+  const userText = userInput.value.trim();
   if (!userText) return;
 
   // Display user message
@@ -510,10 +540,11 @@ async function sendMessage() {
   botMsg.innerText = answer;
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
-  input.value = "";
+  userInput.value = "";
+  suggestionsBox.style.display = "none";
 }
 
 // Enter key triggers send
-document.getElementById("user-input").addEventListener("keypress", function(e){
+userInput.addEventListener("keypress", function(e){
   if(e.key === "Enter") sendMessage();
 });
