@@ -1,5 +1,7 @@
 const chatWindow = document.getElementById("chat-window");
 const userInput = document.getElementById("user-input");
+const sendBtn = document.getElementById("send-btn");
+const suggestionBox = document.getElementById("suggestion-box");
 
 const healthFAQ = {
   // Greetings
@@ -504,40 +506,58 @@ userInput.addEventListener("input", () => {
     suggestionBox.appendChild(div);
   });
 
-  const rect = userInput.getBoundingClientRect();
-  suggestionBox.style.top = rect.bottom + window.scrollY + "px";
-  suggestionBox.style.left = rect.left + window.scrollX + "px";
+// Autocomplete suggestions
+userInput.addEventListener("input", () => {
+  const value = userInput.value.toLowerCase().trim();
+  suggestionBox.innerHTML = "";
+  if (!value) return suggestionBox.style.display = "none";
+
+  const matches = Object.keys(healthFAQ).filter(k => k.includes(value));
+  if (matches.length === 0) return suggestionBox.style.display = "none";
+
+  matches.forEach(match => {
+    const div = document.createElement("div");
+    div.innerText = match;
+    div.className = "suggestion";
+    div.addEventListener("click", () => {
+      userInput.value = match;
+      suggestionBox.style.display = "none";
+      sendMessage();
+    });
+    suggestionBox.appendChild(div);
+  });
+
   suggestionBox.style.display = "block";
 });
 
-// Hide suggestions when clicking outside
-document.addEventListener("click", (e) => {
+// Hide suggestions if clicked outside
+document.addEventListener("click", e => {
   if (e.target !== userInput) suggestionBox.style.display = "none";
 });
 
-// AI fallback using Hugging Face free API
+// AI fallback
 async function getAIAnswer(question) {
   try {
-    const response = await fetch("https://api-inference.huggingface.co/models/gpt2", {
+    const res = await fetch("https://api-inference.huggingface.co/models/gpt2", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ inputs: `You are MITHRA, a helpful health assistant. Answer the question: ${question}` })
     });
-    const data = await response.json();
+    const data = await res.json();
     if (data && data[0]?.generated_text) return data[0].generated_text;
     return "🤖 MITHRA: Sorry, I couldn't generate an answer.";
-  } catch (error) {
-    return "🤖 MITHRA: AI server error, please try again later.";
+  } catch {
+    return "🤖 MITHRA: AI server error, try again later.";
   }
 }
 
-// Combined answer: offline first, AI fallback
+// Get answer (FAQ first, AI fallback)
 async function getAnswer(question) {
-  question = question.toLowerCase();
+  const q = question.toLowerCase();
   for (let key in healthFAQ) {
-    if (question.includes(key)) return healthFAQ[key];
+    if (q.includes(key)) return healthFAQ[key];
   }
-  return await getAIAnswer(question);
+  return await getAIAnswer(q);
 }
 
 // Send message
@@ -545,21 +565,17 @@ async function sendMessage() {
   const userText = userInput.value.trim();
   if (!userText) return;
 
-  // Display user message
   const userMsg = document.createElement("div");
   userMsg.className = "message user";
   userMsg.innerText = userText;
   chatWindow.appendChild(userMsg);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
 
-  // Typing indicator
   const botMsg = document.createElement("div");
   botMsg.className = "message bot";
   botMsg.innerText = "🤖 MITHRA: typing...";
   chatWindow.appendChild(botMsg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
-  // Get answer
   const answer = await getAnswer(userText);
   botMsg.innerText = answer;
   chatWindow.scrollTop = chatWindow.scrollHeight;
@@ -568,7 +584,8 @@ async function sendMessage() {
   suggestionBox.style.display = "none";
 }
 
-// Enter key triggers send
-userInput.addEventListener("keypress", function(e) {
+// Event listeners
+sendBtn.addEventListener("click", sendMessage);
+userInput.addEventListener("keypress", e => {
   if (e.key === "Enter") sendMessage();
 });
