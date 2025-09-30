@@ -1,7 +1,6 @@
 const chatWindow = document.getElementById("chat-window");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
-const suggestionBox = document.getElementById("suggestion-box");
 
 const healthFAQ = {
   // Greetings
@@ -465,99 +464,84 @@ const healthFAQ = {
 };
 
 
-// Suggestions dropdown
-let suggestionBox = document.createElement("div");
-suggestionBox.id = "suggestion-box";
-suggestionBox.style.position = "absolute";
-suggestionBox.style.background = "#000";
-suggestionBox.style.border = "1px solid #ffeb3b";
-suggestionBox.style.borderRadius = "8px";
-suggestionBox.style.width = userInput.offsetWidth + "px";
-suggestionBox.style.zIndex = 1000;
-suggestionBox.style.display = "none";
-document.body.appendChild(suggestionBox);
-
-// Show suggestions based on input
-userInput.addEventListener("input", () => {
-  const value = userInput.value.toLowerCase().trim();
-  suggestionBox.innerHTML = "";
-  if (!value) {
-    suggestionBox.style.display = "none";
-    return;
+// Autocorrection / suggestion function
+function getClosestMatch(question) {
+  const keys = Object.keys(healthFAQ);
+  let maxScore = 0;
+  let bestMatch = null;
+  for (let key of keys) {
+    let score = similarity(key, question);
+    if (score > maxScore) {
+      maxScore = score;
+      bestMatch = key;
+    }
   }
+  return maxScore > 0.5 ? healthFAQ[bestMatch] : null; // Only if similarity > 0.5
+}
 
-  const matches = Object.keys(healthFAQ).filter(key => key.includes(value));
-  if (matches.length === 0) {
-    suggestionBox.style.display = "none";
-    return;
+// Simple similarity function (Levenshtein ratio)
+function similarity(a, b) {
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+  const longer = a.length > b.length ? a : b;
+  const shorter = a.length > b.length ? b : a;
+  const longerLength = longer.length;
+  if (longerLength === 0) return 1.0;
+  return (longerLength - editDistance(longer, shorter)) / longerLength;
+}
+
+function editDistance(a, b) {
+  const matrix = [];
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
   }
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
+        );
+      }
+    }
+  }
+  return matrix[b.length][a.length];
+}
 
-  matches.forEach(match => {
-    const div = document.createElement("div");
-    div.innerText = match;
-    div.style.padding = "8px";
-    div.style.cursor = "pointer";
-    div.style.color = "#ffeb3b";
-    div.addEventListener("click", () => {
-      userInput.value = match;
-      suggestionBox.style.display = "none";
-      sendMessage();
-    });
-    suggestionBox.appendChild(div);
-  });
-
-// Autocomplete suggestions
-userInput.addEventListener("input", () => {
-  const value = userInput.value.toLowerCase().trim();
-  suggestionBox.innerHTML = "";
-  if (!value) return suggestionBox.style.display = "none";
-
-  const matches = Object.keys(healthFAQ).filter(k => k.includes(value));
-  if (matches.length === 0) return suggestionBox.style.display = "none";
-
-  matches.forEach(match => {
-    const div = document.createElement("div");
-    div.innerText = match;
-    div.className = "suggestion";
-    div.addEventListener("click", () => {
-      userInput.value = match;
-      suggestionBox.style.display = "none";
-      sendMessage();
-    });
-    suggestionBox.appendChild(div);
-  });
-
-  suggestionBox.style.display = "block";
-});
-
-// Hide suggestions if clicked outside
-document.addEventListener("click", e => {
-  if (e.target !== userInput) suggestionBox.style.display = "none";
-});
-
-// AI fallback
+// AI fallback using Hugging Face free API
 async function getAIAnswer(question) {
   try {
-    const res = await fetch("https://api-inference.huggingface.co/models/gpt2", {
+    const response = await fetch("https://api-inference.huggingface.co/models/gpt2", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ inputs: `You are MITHRA, a helpful health assistant. Answer the question: ${question}` })
     });
-    const data = await res.json();
+    const data = await response.json();
     if (data && data[0]?.generated_text) return data[0].generated_text;
     return "🤖 MITHRA: Sorry, I couldn't generate an answer.";
-  } catch {
-    return "🤖 MITHRA: AI server error, try again later.";
+  } catch (error) {
+    return "🤖 MITHRA: AI server error, please try again later.";
   }
 }
 
-// Get answer (FAQ first, AI fallback)
+// Combined answer: offline first, suggestion, AI fallback
 async function getAnswer(question) {
-  const q = question.toLowerCase();
+  question = question.toLowerCase();
+  // Exact match
   for (let key in healthFAQ) {
-    if (q.includes(key)) return healthFAQ[key];
+    if (question.includes(key)) return healthFAQ[key];
   }
-  return await getAIAnswer(q);
+  // Suggestion / closest match
+  const suggestion = getClosestMatch(question);
+  if (suggestion) return suggestion;
+  // AI fallback
+  return await getAIAnswer(question);
 }
 
 // Send message
@@ -565,27 +549,29 @@ async function sendMessage() {
   const userText = userInput.value.trim();
   if (!userText) return;
 
+  // Display user message
   const userMsg = document.createElement("div");
   userMsg.className = "message user";
   userMsg.innerText = userText;
   chatWindow.appendChild(userMsg);
 
+  // Typing indicator
   const botMsg = document.createElement("div");
   botMsg.className = "message bot";
   botMsg.innerText = "🤖 MITHRA: typing...";
   chatWindow.appendChild(botMsg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
+  // Get answer
   const answer = await getAnswer(userText);
   botMsg.innerText = answer;
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
   userInput.value = "";
-  suggestionBox.style.display = "none";
 }
 
 // Event listeners
 sendBtn.addEventListener("click", sendMessage);
-userInput.addEventListener("keypress", e => {
+userInput.addEventListener("keypress", function(e) {
   if (e.key === "Enter") sendMessage();
 });
