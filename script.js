@@ -1,6 +1,5 @@
 const chatWindow = document.getElementById("chat-window");
-const userInput = document.getElementById("user-input");
-const suggestionsBox = document.getElementById("suggestions");
+
 
 const healthFAQ = {
   // Greetings
@@ -463,34 +462,6 @@ const healthFAQ = {
   "hydration elderly": "🤖 MITHRA: Drink enough water, monitor urine color, include hydrating foods."
 };
 
-// Simple autocorrect/autocomplete using FAQ keys
-function getSuggestions(text) {
-  const input = text.toLowerCase();
-  const matches = Object.keys(healthFAQ).filter(key => key.startsWith(input));
-  return matches;
-}
-
-// Show autocomplete suggestions
-userInput.addEventListener("input", () => {
-  const value = userInput.value;
-  const suggestions = getSuggestions(value);
-  suggestionsBox.innerHTML = "";
-  if (suggestions.length === 0 || !value) {
-    suggestionsBox.style.display = "none";
-    return;
-  }
-  suggestions.forEach(s => {
-    const div = document.createElement("div");
-    div.className = "suggestion-item";
-    div.innerText = s;
-    div.addEventListener("click", () => {
-      userInput.value = s;
-      suggestionsBox.style.display = "none";
-    });
-    suggestionsBox.appendChild(div);
-  });
-  suggestionsBox.style.display = "block";
-});
 
 // AI fallback using Hugging Face free API
 async function getAIAnswer(question) {
@@ -508,18 +479,57 @@ async function getAIAnswer(question) {
   }
 }
 
-// Combined answer: offline first, AI fallback
+// String similarity function for fuzzy matching
+function similarity(s1, s2) {
+  s1 = s1.toLowerCase();
+  s2 = s2.toLowerCase();
+  const costs = [];
+  for (let i = 0; i <= s1.length; i++) {
+    let lastValue = i;
+    for (let j = 0; j <= s2.length; j++) {
+      if (i === 0) costs[j] = j;
+      else if (j > 0) {
+        let newValue = costs[j - 1];
+        if (s1[i - 1] !== s2[j - 1]) newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
+        costs[j - 1] = lastValue;
+        lastValue = newValue;
+      }
+    }
+    if (i > 0) costs[s2.length] = lastValue;
+  }
+  const distance = costs[s2.length];
+  return 1 - distance / Math.max(s1.length, s2.length);
+}
+
+// Find best matching FAQ key
+function findBestMatch(question) {
+  let bestKey = null;
+  let bestScore = 0;
+  for (let key in healthFAQ) {
+    const score = similarity(question, key);
+    if (score > bestScore) {
+      bestScore = score;
+      bestKey = key;
+    }
+  }
+  return bestScore > 0.5 ? healthFAQ[bestKey] : null;
+}
+
+// Combined answer: offline first, then AI fallback
 async function getAnswer(question) {
   question = question.toLowerCase();
   for (let key in healthFAQ) {
     if (question.includes(key)) return healthFAQ[key];
   }
+  const match = findBestMatch(question);
+  if (match) return match;
   return await getAIAnswer(question);
 }
 
 // Send message
 async function sendMessage() {
-  const userText = userInput.value.trim();
+  const input = document.getElementById("user-input");
+  const userText = input.value.trim();
   if (!userText) return;
 
   // Display user message
@@ -540,11 +550,54 @@ async function sendMessage() {
   botMsg.innerText = answer;
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
-  userInput.value = "";
-  suggestionsBox.style.display = "none";
+  input.value = "";
 }
 
 // Enter key triggers send
-userInput.addEventListener("keypress", function(e){
-  if(e.key === "Enter") sendMessage();
+document.getElementById("user-input").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") sendMessage();
 });
+
+// Send button
+document.getElementById("send-btn").addEventListener("click", sendMessage);
+
+// Real-time search suggestions
+const input = document.getElementById("user-input");
+input.addEventListener("input", function() {
+  const value = input.value.toLowerCase();
+  const suggestions = [];
+  for (let key in healthFAQ) {
+    if (key.includes(value)) suggestions.push(key);
+  }
+  showSuggestions(suggestions);
+});
+
+function showSuggestions(list) {
+  let suggestionBox = document.getElementById("suggestion-box");
+  if (!suggestionBox) {
+    suggestionBox = document.createElement("div");
+    suggestionBox.id = "suggestion-box";
+    suggestionBox.style.position = "absolute";
+    suggestionBox.style.background = "#ffeb3b";
+    suggestionBox.style.color = "#000";
+    suggestionBox.style.width = "calc(100% - 20px)";
+    suggestionBox.style.maxHeight = "120px";
+    suggestionBox.style.overflowY = "auto";
+    suggestionBox.style.borderRadius = "8px";
+    suggestionBox.style.zIndex = "1000";
+    input.parentElement.appendChild(suggestionBox);
+  }
+  suggestionBox.innerHTML = "";
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.innerText = item;
+    div.style.padding = "5px 10px";
+    div.style.cursor = "pointer";
+    div.addEventListener("click", () => {
+      input.value = item;
+      suggestionBox.innerHTML = "";
+    });
+    suggestionBox.appendChild(div);
+  });
+  if (list.length === 0) suggestionBox.innerHTML = "";
+}
