@@ -95,20 +95,25 @@ header nav ul li a:hover { color: #fff; }
   color: #ffeb3b;
 }
 
-/* Send Button */
+/* Send Button - Modified */
 #send-btn {
   padding: 10px 20px;
-  border: none;
-  background-color: #ffeb3b;
-  color: #000;
+  border: 2px solid #ffeb3b; /* Gold border */
+  background-color: #000;      /* Black background */
+  color: #ffeb3b;              /* Gold text */
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.3s ease;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 235, 59, 0.3); /* Subtle gold shadow */
 }
 
 #send-btn:hover {
-  background-color: #fff;
+  background-color: #ffeb3b;   /* Gold background on hover */
+  color: #000;                 /* Black text on hover */
+  box-shadow: 0 6px 12px rgba(255, 235, 59, 0.5); /* Stronger shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Chat container flex */
@@ -125,3 +130,4 @@ header nav ul li a:hover { color: #fff; }
   background-color: #fff;
   color: #000;
 }
+
