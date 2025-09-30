@@ -1400,6 +1400,451 @@ const healthFAQ = {
   "healthy diet choices": "🤖 MITHRA: Fruits, vegetables, whole grains, lean proteins, and limit processed foods.",
   "preventive screenings": "🤖 MITHRA: Blood pressure, cholesterol, cancer screenings, diabetes checks.",
   "wellness monitoring": "🤖 MITHRA: Track weight, vitals, exercise, and symptoms regularly."
+   
+   // 11201–12200: Unique Health Topi
+  // Nutrition & Diet
+  "balanced diet for adults": "🤖 MITHRA: Include fruits, vegetables, lean proteins, whole grains, and healthy fats.",
+  "high-protein foods": "🤖 MITHRA: Eggs, chicken, fish, legumes, nuts, and dairy are excellent sources.",
+  "low-carb diet tips": "🤖 MITHRA: Focus on vegetables, lean protein, avoid sugary foods, and monitor portions.",
+  "fiber-rich foods": "🤖 MITHRA: Beans, lentils, whole grains, fruits, and vegetables improve digestion.",
+  "healthy fats": "🤖 MITHRA: Avocado, nuts, seeds, olive oil, and fatty fish are good sources.",
+  "vitamin D sources": "🤖 MITHRA: Sunlight, fortified milk, fatty fish, and egg yolks provide vitamin D.",
+  "calcium intake": "🤖 MITHRA: Dairy, leafy greens, fortified foods, and supplements if needed.",
+  "iron-rich foods": "🤖 MITHRA: Red meat, beans, lentils, spinach, and fortified cereals.",
+  "hydrating foods": "🤖 MITHRA: Watermelon, cucumber, oranges, celery, and soups help hydration.",
+  "healthy snacking": "🤖 MITHRA: Fruits, nuts, yogurt, and vegetable sticks instead of processed snacks.",
+
+  // Fitness & Exercise
+  "beginner workout plan": "🤖 MITHRA: Start with 30 minutes cardio, basic strength exercises, and stretching 3–4 times/week.",
+  "HIIT benefits": "🤖 MITHRA: Burns fat, improves cardiovascular health, and increases metabolism.",
+  "yoga for beginners": "🤖 MITHRA: Focus on breathing, basic poses, flexibility, and gradual progression.",
+  "home cardio exercises": "🤖 MITHRA: Jumping jacks, running in place, stair climbing, and skipping rope.",
+  "strength training for beginners": "🤖 MITHRA: Bodyweight exercises, resistance bands, light weights, proper form.",
+  "flexibility exercises": "🤖 MITHRA: Stretching, yoga, Pilates, and mobility routines improve flexibility.",
+  "core strengthening": "🤖 MITHRA: Planks, crunches, bridges, and balance exercises build core muscles.",
+  "exercise frequency": "🤖 MITHRA: At least 150 minutes moderate or 75 minutes vigorous exercise weekly.",
+  "post-workout recovery": "🤖 MITHRA: Stretching, hydration, protein intake, and rest aid recovery.",
+  "workout safety tips": "🤖 MITHRA: Warm-up, proper form, avoid overexertion, and stay hydrated.",
+
+  // Mental Health
+  "stress management techniques": "🤖 MITHRA: Deep breathing, meditation, exercise, hobbies, and social support.",
+  "anxiety coping strategies": "🤖 MITHRA: Mindfulness, therapy, journaling, adequate sleep, and relaxation techniques.",
+  "depression support": "🤖 MITHRA: Seek therapy, social interaction, exercise, and proper medical care.",
+  "mindfulness practices": "🤖 MITHRA: Meditation, focused breathing, yoga, and being present in activities.",
+  "sleep hygiene tips": "🤖 MITHRA: Maintain routine, reduce caffeine, create a dark and quiet environment.",
+  "mental health for students": "🤖 MITHRA: Time management, breaks, social support, and seeking guidance.",
+  "work-life balance": "🤖 MITHRA: Set boundaries, schedule leisure, manage tasks, and practice self-care.",
+  "reducing screen time": "🤖 MITHRA: Take regular breaks, outdoor activities, and limit social media usage.",
+  "coping with grief": "🤖 MITHRA: Allow emotions, seek support, counseling, and healthy routines.",
+  "boosting mood naturally": "🤖 MITHRA: Exercise, sunlight, hobbies, social connections, and nutritious food.",
+
+  // Chronic Diseases & Management
+  "diabetes management tips": "🤖 MITHRA: Monitor blood sugar, balanced diet, exercise, and medications if prescribed.",
+  "blood pressure control": "🤖 MITHRA: Limit salt, exercise, manage stress, avoid smoking, and take medication as advised.",
+  "cholesterol management": "🤖 MITHRA: Reduce saturated fats, eat fiber-rich foods, exercise, and follow medical guidance.",
+  "heart health tips": "🤖 MITHRA: Regular exercise, balanced diet, stress management, and routine checkups.",
+  "kidney health tips": "🤖 MITHRA: Stay hydrated, avoid excess salt, maintain blood pressure, and regular monitoring.",
+  "liver health tips": "🤖 MITHRA: Limit alcohol, avoid toxins, eat balanced diet, and regular checkups.",
+  "arthritis relief": "🤖 MITHRA: Maintain activity, avoid overuse, manage weight, and follow medical advice.",
+  "asthma management": "🤖 MITHRA: Avoid triggers, use inhalers as prescribed, and monitor symptoms.",
+  "obesity prevention": "🤖 MITHRA: Balanced diet, regular physical activity, and avoid sedentary lifestyle.",
+  "cancer prevention tips": "🤖 MITHRA: Avoid smoking, eat healthy, regular screenings, maintain active lifestyle.",
+
+  // Women’s Health
+  "menstrual pain relief": "🤖 MITHRA: Heat therapy, gentle exercise, hydration, and pain medications if needed.",
+  "pregnancy exercise": "🤖 MITHRA: Low-impact activities, walking, swimming, and prenatal yoga with medical approval.",
+  "breastfeeding tips": "🤖 MITHRA: Proper latch, regular feeding, hydration, and balanced diet.",
+  "menopause symptom relief": "🤖 MITHRA: Exercise, healthy diet, stress management, and consult doctor for therapies.",
+  "PCOS diet tips": "🤖 MITHRA: Low sugar, high fiber, balanced meals, and regular physical activity.",
+  "contraception guidance": "🤖 MITHRA: Consult doctor to choose the most suitable method, follow instructions.",
+  "prenatal vitamins": "🤖 MITHRA: Folic acid, iron, calcium, and other nutrients as recommended by your doctor.",
+  "fertility optimization": "🤖 MITHRA: Healthy weight, stress management, regular checkups, and diet.",
+  "postpartum care": "🤖 MITHRA: Adequate rest, balanced diet, hydration, and mental health monitoring.",
+  "gynecological checkups": "🤖 MITHRA: Regular exams, Pap smear, breast checks, and report abnormalities promptly.",
+
+  // Men’s Health
+  "prostate checkup": "🤖 MITHRA: Regular screenings, healthy diet, and report urinary symptoms promptly.",
+  "erectile dysfunction help": "🤖 MITHRA: Lifestyle improvements, manage stress, consult doctor for medications.",
+  "male fertility diet": "🤖 MITHRA: Zinc-rich foods, antioxidants, avoid smoking/alcohol, maintain healthy weight.",
+  "heart health for men": "🤖 MITHRA: Exercise, balanced diet, monitor blood pressure, reduce stress.",
+  "testosterone maintenance": "🤖 MITHRA: Adequate sleep, regular exercise, balanced nutrition, manage stress.",
+  "men's mental well-being": "🤖 MITHRA: Social support, counseling if needed, hobbies, mindfulness.",
+  "low libido causes": "🤖 MITHRA: Hormonal changes, stress, medical conditions; consult a doctor if persistent.",
+  "healthy aging in men": "🤖 MITHRA: Balanced diet, exercise, social engagement, regular health screenings.",
+  "weight management for men": "🤖 MITHRA: Exercise, balanced diet, monitor calories, and stay active.",
+  "stress reduction for men": "🤖 MITHRA: Hobbies, relaxation techniques, exercise, and mindfulness.",
+
+  // Children & Adolescents
+  "childhood vaccination": "🤖 MITHRA: Follow schedule, keep records, consult pediatrician for updates.",
+  "healthy snacks for kids": "🤖 MITHRA: Fruits, nuts, yogurt, vegetables, and limit sugary treats.",
+  "physical activity for kids": "🤖 MITHRA: At least 60 minutes daily, outdoor play, sports, and active games.",
+  "teen mental health tips": "🤖 MITHRA: Encourage communication, manage stress, and seek counseling if needed.",
+  "child sleep hygiene": "🤖 MITHRA: Consistent bedtime, limited screens, calming routines.",
+  "child obesity prevention": "🤖 MITHRA: Healthy meals, active lifestyle, limit sedentary time.",
+  "dental care for kids": "🤖 MITHRA: Brush twice daily, floss, reduce sugar, regular dentist visits.",
+  "adolescent nutrition": "🤖 MITHRA: Balanced diet, sufficient protein, calcium, iron, vitamins.",
+  "screen time management": "🤖 MITHRA: Set limits, encourage physical activity, breaks, outdoor play.",
+  "vaccination awareness": "🤖 MITHRA: Educate children, ensure timely vaccinations, track records.",
+
+  // General Health & Preventive Care
+  "regular health checkups": "🤖 MITHRA: Annual exams, blood tests, eye and dental screenings.",
+  "preventive health tips": "🤖 MITHRA: Balanced diet, regular exercise, avoid smoking, manage stress.",
+  "hydration importance": "🤖 MITHRA: Drink sufficient water daily, monitor urine color, adjust for activity.",
+  "sleep for overall health": "🤖 MITHRA: 7–9 hours for adults, consistent schedule, calm environment.",
+  "stress impact on health": "🤖 MITHRA: Increases risk of chronic diseases; manage with relaxation and exercise.",
+  "healthy lifestyle habits": "🤖 MITHRA: Balanced diet, exercise, sleep, social connections, avoid harmful habits.",
+  "early disease detection": "🤖 MITHRA: Routine screenings, blood tests, imaging, and regular doctor visits.",
+  "weight monitoring": "🤖 MITHRA: Track BMI, maintain healthy weight, adjust diet and activity as needed.",
+  "mental wellness practices": "🤖 MITHRA: Mindfulness, hobbies, social engagement, professional support.",
+  "preventing chronic illness": "🤖 MITHRA: Healthy diet, regular exercise, vaccinations, routine health checkups."
+
+  // 12201–13200: Unique Health Topics
+
+
+  // Nutrition & Supplements
+  "vitamin C benefits": "🤖 MITHRA: Supports immunity, skin health, and wound healing.",
+  "zinc for immunity": "🤖 MITHRA: Important for immune function, wound healing, and growth.",
+  "magnesium sources": "🤖 MITHRA: Nuts, seeds, whole grains, leafy greens, and legumes.",
+  "omega-3 fatty acids": "🤖 MITHRA: Found in fish, flaxseed, chia; support heart and brain health.",
+  "probiotics benefits": "🤖 MITHRA: Promote gut health, digestion, and immunity.",
+  "multivitamin use": "🤖 MITHRA: Fills nutritional gaps; follow dosage instructions.",
+  "iron supplementation": "🤖 MITHRA: Helps prevent anemia; take as advised by doctor.",
+  "calcium supplements": "🤖 MITHRA: Supports bone health; take with vitamin D for absorption.",
+  "folic acid importance": "🤖 MITHRA: Crucial in pregnancy to prevent neural tube defects.",
+  "hydration for athletes": "🤖 MITHRA: Drink water before, during, and after exercise; replace electrolytes if needed.",
+
+  // Fitness & Exercise
+  "resistance training benefits": "🤖 MITHRA: Builds muscle, strengthens bones, boosts metabolism.",
+  "cardio exercises at home": "🤖 MITHRA: Jump rope, running in place, high knees, or stair climbing.",
+  "stretching importance": "🤖 MITHRA: Improves flexibility, reduces injury risk, and aids recovery.",
+  "posture improvement exercises": "🤖 MITHRA: Planks, back extensions, shoulder stretches, core strengthening.",
+  "warm-up exercises": "🤖 MITHRA: Light cardio, dynamic stretching, joint rotations before workouts.",
+  "cool-down exercises": "🤖 MITHRA: Slow walking, static stretching, deep breathing after workouts.",
+  "exercise for seniors": "🤖 MITHRA: Low-impact cardio, resistance bands, balance and flexibility exercises.",
+  "interval training": "🤖 MITHRA: Alternates high and low intensity, improves endurance and fat loss.",
+  "exercise during pregnancy": "🤖 MITHRA: Walking, swimming, prenatal yoga; avoid high-impact activities.",
+  "home workout equipment": "🤖 MITHRA: Resistance bands, dumbbells, stability ball, yoga mat, skipping rope.",
+
+  // Mental Health & Mindfulness
+  "mindful eating": "🤖 MITHRA: Focus on taste, smell, and texture; eat slowly to improve digestion.",
+  "breathing exercises": "🤖 MITHRA: Deep, slow breaths reduce stress and improve focus.",
+  "journaling benefits": "🤖 MITHRA: Helps process emotions, track progress, and relieve stress.",
+  "cognitive exercises": "🤖 MITHRA: Puzzles, memory games, reading, and learning new skills.",
+  "social support importance": "🤖 MITHRA: Family, friends, or support groups improve mental well-being.",
+  "managing work stress": "🤖 MITHRA: Time management, breaks, physical activity, and relaxation techniques.",
+  "relaxation techniques": "🤖 MITHRA: Meditation, progressive muscle relaxation, deep breathing, visualization.",
+  "anxiety reduction tips": "🤖 MITHRA: Mindfulness, exercise, structured routines, and professional help if needed.",
+  "coping with burnout": "🤖 MITHRA: Rest, delegate tasks, seek support, and re-prioritize activities.",
+  "emotional self-care": "🤖 MITHRA: Hobbies, social interactions, journaling, and professional counseling.",
+
+  // Chronic Conditions
+  "type 2 diabetes prevention": "🤖 MITHRA: Healthy diet, exercise, weight management, and regular checkups.",
+  "managing prediabetes": "🤖 MITHRA: Monitor blood sugar, balanced diet, physical activity, and weight control.",
+  "high blood pressure diet": "🤖 MITHRA: Low sodium, high potassium, balanced diet, limit processed foods.",
+  "cholesterol-lowering foods": "🤖 MITHRA: Oats, nuts, fatty fish, fruits, vegetables, and plant sterols.",
+  "heart attack warning signs": "🤖 MITHRA: Chest pain, shortness of breath, nausea, sweating; seek immediate help.",
+  "stroke warning signs": "🤖 MITHRA: Face drooping, arm weakness, speech difficulty; call emergency services.",
+  "COPD management": "🤖 MITHRA: Avoid smoking, medications, pulmonary rehab, breathing exercises.",
+  "arthritis pain relief": "🤖 MITHRA: Exercise, hot/cold therapy, medications, and maintain healthy weight.",
+  "kidney disease prevention": "🤖 MITHRA: Control blood pressure, stay hydrated, avoid excess salt and processed foods.",
+  "liver protection tips": "🤖 MITHRA: Limit alcohol, avoid toxins, maintain healthy weight, and regular screenings.",
+
+  // Women’s Health
+  "breast self-exam": "🤖 MITHRA: Perform monthly, check for lumps or changes, consult doctor if noticed.",
+  "ovulation tracking": "🤖 MITHRA: Track cycle, monitor symptoms, or use ovulation kits for conception.",
+  "menstrual hygiene tips": "🤖 MITHRA: Change pads/tampons regularly, maintain cleanliness, proper disposal.",
+  "menopause lifestyle tips": "🤖 MITHRA: Exercise, balanced diet, stress management, medical consultation for symptoms.",
+  "PCOS management": "🤖 MITHRA: Balanced diet, exercise, weight management, medication if prescribed.",
+  "fertility tips": "🤖 MITHRA: Maintain healthy weight, reduce stress, balanced nutrition, and regular checkups.",
+  "pregnancy nutrition": "🤖 MITHRA: Adequate protein, vitamins, minerals, hydration, and prenatal supplements.",
+  "postpartum mental health": "🤖 MITHRA: Monitor mood, seek support, rest, and counseling if needed.",
+  "contraception types": "🤖 MITHRA: Condoms, pills, IUDs, implants; consult doctor for suitability.",
+  "gynecological screening": "🤖 MITHRA: Pap smear, mammogram, pelvic exam, and report any abnormalities.",
+
+  // Men’s Health
+  "prostate health tips": "🤖 MITHRA: Regular screenings, healthy diet, maintain weight, and report urinary symptoms.",
+  "male fertility tips": "🤖 MITHRA: Healthy diet, exercise, avoid smoking/alcohol, manage stress.",
+  "erectile dysfunction help": "🤖 MITHRA: Lifestyle changes, counseling, medications as prescribed.",
+  "testosterone support": "🤖 MITHRA: Adequate sleep, exercise, balanced diet, stress management.",
+  "heart health in men": "🤖 MITHRA: Exercise, balanced diet, monitor blood pressure, avoid smoking.",
+  "mental health in men": "🤖 MITHRA: Encourage communication, hobbies, social support, counseling if needed.",
+  "male weight management": "🤖 MITHRA: Exercise, balanced diet, monitor calories, stay active.",
+  "men’s stress relief": "🤖 MITHRA: Physical activity, hobbies, relaxation, mindfulness.",
+  "healthy aging in men": "🤖 MITHRA: Balanced diet, exercise, screenings, social engagement.",
+  "sexual health in men": "🤖 MITHRA: Safe sex, STI screenings, regular checkups.",
+
+  // Children & Adolescents
+  "child nutrition tips": "🤖 MITHRA: Balanced meals, fruits, vegetables, adequate protein, limit sugar.",
+  "childhood physical activity": "🤖 MITHRA: At least 60 minutes daily, outdoor play, sports, and active games.",
+  "teen mental health": "🤖 MITHRA: Encourage open communication, stress management, counseling if needed.",
+  "child sleep tips": "🤖 MITHRA: Consistent bedtime, limited screens, calm environment.",
+  "preventing child obesity": "🤖 MITHRA: Healthy meals, active lifestyle, reduce sedentary time.",
+  "dental care for children": "🤖 MITHRA: Brush twice daily, floss, limit sugar, regular dentist visits.",
+  "adolescent nutrition": "🤖 MITHRA: Adequate protein, vitamins, minerals, and balanced meals.",
+  "screen time for kids": "🤖 MITHRA: Limit duration, encourage breaks, outdoor activity.",
+  "vaccination importance": "🤖 MITHRA: Follow schedule, consult pediatrician, maintain records.",
+  "child mental wellness": "🤖 MITHRA: Encourage hobbies, social interactions, stress relief, counseling if needed.",
+
+  // General Health & Lifestyle
+  "regular health screenings": "🤖 MITHRA: Annual exams, blood tests, eye and dental checkups.",
+  "preventive healthcare": "🤖 MITHRA: Balanced diet, exercise, sleep, vaccinations, routine checkups.",
+  "importance of hydration": "🤖 MITHRA: Supports organ function, prevents dehydration, improves energy.",
+  "benefits of sleep": "🤖 MITHRA: Enhances memory, immune function, mood, and overall health.",
+  "stress and health": "🤖 MITHRA: Chronic stress increases risk for multiple diseases; manage with relaxation and activity.",
+  "healthy lifestyle habits": "🤖 MITHRA: Balanced diet, physical activity, mental well-being, avoid harmful habits.",
+  "disease prevention tips": "🤖 MITHRA: Vaccinations, healthy diet, exercise, avoid smoking/alcohol, regular screenings.",
+  "weight management strategies": "🤖 MITHRA: Balanced diet, physical activity, monitor progress, set realistic goals.",
+  "mental wellness strategies": "🤖 MITHRA: Mindfulness, hobbies, social engagement, counseling if necessary.",
+  "chronic illness prevention": "🤖 MITHRA: Healthy diet, exercise, sleep, stress management, routine checkups."
+
+  // 13201–14200: Unique Health Topics
+
+
+  // Immunity & Infection
+  "boost immune system naturally": "🤖 MITHRA: Eat fruits, vegetables, protein, exercise, sleep well, reduce stress.",
+  "prevent infections": "🤖 MITHRA: Wash hands, maintain hygiene, stay vaccinated, avoid contact with sick people.",
+  "cold vs flu": "🤖 MITHRA: Cold has mild symptoms; flu is severe with fever, body aches, fatigue.",
+  "common cold remedies": "🤖 MITHRA: Rest, fluids, warm soup, honey, vitamin C, saline nasal spray.",
+  "flu prevention tips": "🤖 MITHRA: Vaccination, hand hygiene, avoid crowded places during outbreaks.",
+  "handwashing importance": "🤖 MITHRA: Removes germs, prevents disease spread, protects self and others.",
+  "travel vaccines": "🤖 MITHRA: Required depending on destination; consult travel health clinic.",
+  "antibiotic misuse": "🤖 MITHRA: Can cause resistance; take only as prescribed by a doctor.",
+  "viral infections prevention": "🤖 MITHRA: Hygiene, vaccination, avoid sharing utensils, mask in crowded areas.",
+  "immune-boosting foods": "🤖 MITHRA: Citrus, garlic, ginger, yogurt, nuts, green leafy vegetables.",
+
+  // Heart & Cardiovascular
+  "heart attack prevention": "🤖 MITHRA: Healthy diet, exercise, avoid smoking, manage stress, regular checkups.",
+  "high cholesterol causes": "🤖 MITHRA: Poor diet, sedentary lifestyle, obesity, genetics.",
+  "low blood pressure symptoms": "🤖 MITHRA: Dizziness, fainting, fatigue; stay hydrated and consult a doctor.",
+  "heart-healthy diet": "🤖 MITHRA: Fruits, vegetables, whole grains, lean protein, limit saturated fats.",
+  "exercise for heart health": "🤖 MITHRA: Cardio exercises, brisk walking, swimming, cycling regularly.",
+  "hypertension warning signs": "🤖 MITHRA: Headache, shortness of breath, nosebleeds; often asymptomatic.",
+  "arrhythmia types": "🤖 MITHRA: Atrial fibrillation, bradycardia, tachycardia; monitor and consult doctor.",
+  "heart disease risk factors": "🤖 MITHRA: High blood pressure, high cholesterol, smoking, diabetes, obesity.",
+  "cardiovascular screenings": "🤖 MITHRA: Blood pressure, cholesterol, ECG, echocardiogram if recommended.",
+  "managing stress for heart": "🤖 MITHRA: Meditation, deep breathing, exercise, adequate sleep, hobbies.",
+
+  // Respiratory Health
+  "asthma triggers": "🤖 MITHRA: Dust, pollen, smoke, pollution, cold air, stress, respiratory infections.",
+  "asthma management": "🤖 MITHRA: Medications, inhalers, avoid triggers, monitor symptoms.",
+  "COPD prevention": "🤖 MITHRA: Avoid smoking, reduce pollution exposure, vaccinations, regular exercise.",
+  "breathing exercises for lung health": "🤖 MITHRA: Diaphragmatic breathing, pursed-lip breathing, deep breathing daily.",
+  "smoking cessation benefits": "🤖 MITHRA: Improves lung function, reduces cancer and heart disease risk.",
+  "pneumonia symptoms": "🤖 MITHRA: Cough, fever, chest pain, difficulty breathing; seek medical attention.",
+  "tuberculosis prevention": "🤖 MITHRA: Vaccination, proper ventilation, early diagnosis and treatment.",
+  "COPD symptoms": "🤖 MITHRA: Chronic cough, sputum production, shortness of breath, wheezing.",
+  "allergy vs cold": "🤖 MITHRA: Allergies cause itchy eyes/nose, no fever; cold causes fatigue, sore throat, mild fever.",
+  "air pollution effects": "🤖 MITHRA: Respiratory irritation, asthma exacerbation, reduced lung function, long-term heart risks.",
+
+  // Digestive Health
+  "healthy digestion tips": "🤖 MITHRA: Fiber-rich diet, hydration, regular meals, avoid excessive processed foods.",
+  "prevent constipation": "🤖 MITHRA: Drink water, eat fiber, exercise, avoid prolonged sitting.",
+  "acid reflux causes": "🤖 MITHRA: Overeating, fatty foods, alcohol, smoking, lying down after meals.",
+  "acid reflux remedies": "🤖 MITHRA: Smaller meals, avoid trigger foods, elevate head while sleeping.",
+  "IBS management": "🤖 MITHRA: Dietary adjustments, stress management, hydration, medical guidance.",
+  "diarrhea causes": "🤖 MITHRA: Infection, food intolerance, medications; stay hydrated and seek medical help if severe.",
+  "food poisoning prevention": "🤖 MITHRA: Proper food handling, cooking, refrigeration, clean water.",
+  "gut microbiome support": "🤖 MITHRA: Probiotics, prebiotics, fiber-rich foods, balanced diet.",
+  "liver detox myths": "🤖 MITHRA: Healthy liver detoxifies naturally; avoid extreme cleanses or supplements.",
+  "hydration for digestion": "🤖 MITHRA: Water aids nutrient absorption, bowel regularity, and toxin removal.",
+
+  // Skin, Hair & Personal Care
+  "skin hydration tips": "🤖 MITHRA: Moisturize daily, drink water, avoid harsh soaps, sun protection.",
+  "acne management": "🤖 MITHRA: Gentle cleansing, avoid squeezing, topical treatments, balanced diet.",
+  "sun protection importance": "🤖 MITHRA: Prevents skin cancer, aging, sunburn; use SPF, hats, clothing.",
+  "hair fall causes": "🤖 MITHRA: Nutrient deficiency, stress, hormonal imbalance, genetics, harsh chemicals.",
+  "hair growth tips": "🤖 MITHRA: Healthy diet, scalp massage, avoid heat styling, gentle care.",
+  "nail care tips": "🤖 MITHRA: Keep nails trimmed, clean, moisturized; avoid biting or harsh chemicals.",
+  "eczema care": "🤖 MITHRA: Moisturize, avoid triggers, use prescribed creams, gentle skincare.",
+  "psoriasis management": "🤖 MITHRA: Moisturizers, topical treatments, phototherapy, stress reduction.",
+  "hygiene habits": "🤖 MITHRA: Daily bathing, handwashing, oral care, clean clothing and surroundings.",
+  "body odor control": "🤖 MITHRA: Regular washing, antiperspirants, clean clothes, dietary adjustments.",
+
+  // Sleep & Rest
+  "importance of sleep": "🤖 MITHRA: Supports immunity, memory, mood, metabolism, and overall health.",
+  "insomnia tips": "🤖 MITHRA: Consistent schedule, limit screens, relaxation techniques, avoid caffeine late.",
+  "sleep hygiene": "🤖 MITHRA: Dark, cool, quiet environment; consistent bedtime; avoid heavy meals before sleep.",
+  "napping benefits": "🤖 MITHRA: Short naps boost alertness, mood, and cognitive function.",
+  "sleep disorders": "🤖 MITHRA: Sleep apnea, insomnia, restless legs; consult a specialist for diagnosis.",
+  "melatonin use": "🤖 MITHRA: Can regulate sleep cycles; follow dosage instructions and medical advice.",
+  "stress and sleep": "🤖 MITHRA: Relaxation, meditation, deep breathing reduce insomnia caused by stress.",
+  "exercise and sleep": "🤖 MITHRA: Regular activity improves sleep quality and duration.",
+  "screen time before bed": "🤖 MITHRA: Reduces melatonin; avoid phones/computers 1 hour before bedtime.",
+  "sleep for children": "🤖 MITHRA: Ensure age-appropriate hours; consistent routines improve health and growth.",
+
+  // Emergency & First Aid
+  "burn first aid": "🤖 MITHRA: Cool with running water, cover loosely, seek medical attention if severe.",
+  "fracture first aid": "🤖 MITHRA: Immobilize, apply cold, seek immediate medical care.",
+  "choking emergency": "🤖 MITHRA: Heimlich maneuver for conscious adults/children, call emergency services if severe.",
+  "bleeding control": "🤖 MITHRA: Apply pressure, elevate limb, seek medical help if bleeding persists.",
+  "heat stroke signs": "🤖 MITHRA: High body temperature, confusion, nausea, rapid heartbeat; call emergency services.",
+  "fainting response": "🤖 MITHRA: Lay person flat, elevate legs, loosen clothing, seek medical care if needed.",
+  "poisoning first aid": "🤖 MITHRA: Call poison control, do not induce vomiting unless instructed, seek emergency care.",
+  "allergic reaction emergency": "🤖 MITHRA: Use epinephrine if prescribed, call emergency services for severe reactions.",
+  "animal bite first aid": "🤖 MITHRA: Clean wound, apply antiseptic, seek medical advice for rabies vaccination.",
+  "CPR basics": "🤖 MITHRA: Chest compressions and rescue breaths; seek training for proper technique."
+
+// 14201–15200: Unique Health Topics
+
+
+  // Mental Health & Wellbeing
+  "anxiety management": "🤖 MITHRA: Practice deep breathing, meditation, journaling, therapy, and maintain social connections.",
+  "depression signs": "🤖 MITHRA: Persistent sadness, loss of interest, fatigue, changes in appetite or sleep; seek professional help.",
+  "stress relief techniques": "🤖 MITHRA: Yoga, exercise, mindfulness, hobbies, social support, and adequate sleep.",
+  "mindfulness benefits": "🤖 MITHRA: Reduces stress, improves focus, emotional regulation, and overall mental health.",
+  "self-care routines": "🤖 MITHRA: Regular sleep, nutrition, exercise, relaxation, and enjoyable activities.",
+  "coping with grief": "🤖 MITHRA: Allow emotions, seek support, talk with loved ones or professionals, practice self-care.",
+  "work-life balance tips": "🤖 MITHRA: Set boundaries, prioritize tasks, take breaks, and schedule personal time.",
+  "social anxiety help": "🤖 MITHRA: Gradual exposure, therapy, mindfulness, and building supportive relationships.",
+  "mental health stigma": "🤖 MITHRA: Educate yourself and others, encourage open discussion, and seek help without shame.",
+  "improving focus": "🤖 MITHRA: Limit distractions, take breaks, set goals, and practice concentration exercises.",
+
+  // Nutrition & Diet
+  "balanced diet tips": "🤖 MITHRA: Include fruits, vegetables, whole grains, lean proteins, and healthy fats.",
+  "vitamin D sources": "🤖 MITHRA: Sunlight, fatty fish, fortified milk, and supplements if prescribed.",
+  "iron-rich foods": "🤖 MITHRA: Spinach, red meat, lentils, beans, and fortified cereals.",
+  "calcium intake": "🤖 MITHRA: Milk, yogurt, cheese, leafy greens, and fortified plant-based milk.",
+  "fiber benefits": "🤖 MITHRA: Improves digestion, lowers cholesterol, regulates blood sugar, and promotes satiety.",
+  "hydration tips": "🤖 MITHRA: Drink 8–10 glasses of water daily; more during exercise or hot weather.",
+  "healthy snacking": "🤖 MITHRA: Nuts, fruits, yogurt, vegetables, and whole-grain options.",
+  "sugar intake reduction": "🤖 MITHRA: Limit sugary drinks, candies, pastries; read labels carefully.",
+  "omega-3 benefits": "🤖 MITHRA: Supports heart health, brain function, and reduces inflammation.",
+  "meal planning advice": "🤖 MITHRA: Prepare balanced meals, control portions, and include variety for nutrients.",
+
+  // Women’s Health
+  "menstrual cycle care": "🤖 MITHRA: Track cycles, maintain hygiene, manage cramps with heat, rest, and hydration.",
+  "PMS relief": "🤖 MITHRA: Exercise, balanced diet, stress reduction, and over-the-counter pain relief if needed.",
+  "menopause symptoms": "🤖 MITHRA: Hot flashes, mood swings, sleep disturbances; consult healthcare provider.",
+  "osteoporosis prevention": "🤖 MITHRA: Calcium and vitamin D intake, weight-bearing exercise, avoid smoking/alcohol.",
+  "pregnancy nutrition": "🤖 MITHRA: Eat diverse nutrients, folic acid, iron, calcium, and adequate hydration.",
+  "breastfeeding tips": "🤖 MITHRA: Maintain nutrition, stay hydrated, support proper latch, and rest when possible.",
+  "fertility support": "🤖 MITHRA: Maintain healthy weight, balanced diet, reduce stress, regular checkups.",
+  "prenatal care": "🤖 MITHRA: Regular doctor visits, supplements, vaccinations, avoid harmful substances.",
+  "PCOS management": "🤖 MITHRA: Balanced diet, regular exercise, weight management, and medical guidance.",
+  "uterine health": "🤖 MITHRA: Regular checkups, manage infections, maintain hygiene, report abnormal bleeding.",
+
+  // Men’s Health
+  "prostate health tips": "🤖 MITHRA: Regular checkups, balanced diet, exercise, limit alcohol, avoid smoking.",
+  "testosterone support": "🤖 MITHRA: Strength training, balanced diet, sufficient sleep, stress management.",
+  "erectile dysfunction advice": "🤖 MITHRA: Lifestyle changes, manage underlying conditions, consult doctor.",
+  "male fertility tips": "🤖 MITHRA: Avoid smoking, limit alcohol, maintain healthy weight, manage stress.",
+  "heart health for men": "🤖 MITHRA: Exercise, reduce salt, healthy diet, regular medical screenings.",
+  "male pattern baldness": "🤖 MITHRA: Genetics are primary; treatments include medications or hair restoration if desired.",
+  "prostate cancer prevention": "🤖 MITHRA: Healthy diet, regular screenings, avoid smoking, exercise regularly.",
+  "urinary health men": "🤖 MITHRA: Stay hydrated, avoid holding urine long, maintain hygiene, consult if issues arise.",
+  "muscle mass maintenance": "🤖 MITHRA: Strength training, protein-rich diet, sufficient sleep, consistent workouts.",
+  "mental health men": "🤖 MITHRA: Encourage emotional expression, reduce stigma, seek therapy if needed.",
+
+  // Children & Adolescent Health
+  "childhood nutrition": "🤖 MITHRA: Balanced diet, fruits, vegetables, dairy, proteins; limit sugar and processed foods.",
+  "immunization schedule": "🤖 MITHRA: Follow national guidelines for vaccines to prevent serious diseases.",
+  "childhood obesity prevention": "🤖 MITHRA: Healthy diet, regular activity, limit screen time, encourage outdoor play.",
+  "adolescent growth tips": "🤖 MITHRA: Balanced nutrition, sleep, physical activity, regular medical checkups.",
+  "screen time limits": "🤖 MITHRA: Encourage outdoor play, homework, and social interaction; limit recreational screens.",
+  "mental health teens": "🤖 MITHRA: Support, open communication, stress management, seek professional help if needed.",
+  "dental care children": "🤖 MITHRA: Brush twice daily, floss, limit sugary foods, regular dentist visits.",
+  "preventing injuries kids": "🤖 MITHRA: Supervision, safety gear, childproof home, teach safety rules.",
+  "vaccines side effects": "🤖 MITHRA: Mild fever, soreness; usually temporary. Severe reactions are rare; consult doctor.",
+  "healthy sleep children": "🤖 MITHRA: Ensure age-appropriate hours, consistent bedtime, calm environment.",
+
+  // Aging & Senior Health
+  "healthy aging tips": "🤖 MITHRA: Exercise, balanced diet, social engagement, mental stimulation, regular checkups.",
+  "osteoporosis management": "🤖 MITHRA: Calcium, vitamin D, weight-bearing exercise, avoid smoking/alcohol.",
+  "dementia prevention": "🤖 MITHRA: Mental exercises, social engagement, physical activity, healthy diet.",
+  "senior hydration": "🤖 MITHRA: Older adults may need reminders to drink water regularly to prevent dehydration.",
+  "falls prevention": "🤖 MITHRA: Safe home environment, balance exercises, proper footwear, regular vision checks.",
+  "arthritis management": "🤖 MITHRA: Exercise, maintain healthy weight, physical therapy, medications if prescribed.",
+  "vision care seniors": "🤖 MITHRA: Regular eye exams, proper lighting, protective eyewear, manage chronic conditions.",
+  "hearing loss prevention": "🤖 MITHRA: Avoid loud noise, use hearing protection, consult audiologist if needed.",
+  "memory improvement tips": "🤖 MITHRA: Brain games, learning new skills, social interaction, physical activity.",
+  "sleep tips for seniors": "🤖 MITHRA: Consistent bedtime, calm environment, limit caffeine, light evening activity.",
+
+  // Environmental & Lifestyle
+  "air quality impact": "🤖 MITHRA: Poor air quality can worsen respiratory/cardiac conditions; limit exposure, use masks.",
+  "ergonomic workspace": "🤖 MITHRA: Proper chair height, monitor at eye level, keyboard/mouse comfortable, take breaks.",
+  "exercise benefits": "🤖 MITHRA: Improves cardiovascular, mental, musculoskeletal health, boosts immunity.",
+  "sedentary lifestyle risks": "🤖 MITHRA: Obesity, diabetes, heart disease, back pain, poor mental health.",
+  "water quality tips": "🤖 MITHRA: Drink clean, filtered water; avoid contaminated sources to prevent illness.",
+  "sun exposure safety": "🤖 MITHRA: Use sunscreen, protective clothing, avoid peak sun hours to prevent skin damage.",
+  "noise pollution effects": "🤖 MITHRA: Hearing loss, stress, sleep disturbances, cardiovascular impact.",
+  "healthy commuting": "🤖 MITHRA: Walk, cycle, public transport; avoid long sedentary drives if possible.",
+  "urban gardening benefits": "🤖 MITHRA: Access to fresh produce, stress reduction, outdoor activity, environmental awareness.",
+  "screen posture tips": "🤖 MITHRA: Monitor at eye level, keep shoulders relaxed, take breaks, stretch frequently."
+
+  // 15201–16200: Unique Health Topics
+
+
+  "boost immunity naturally": "🤖 MITHRA: Eat fruits, vegetables, protein, exercise, sleep well, manage stress.",
+  "vitamin C benefits": "🤖 MITHRA: Supports immune function, antioxidant, aids collagen production.",
+  "zinc role in immunity": "🤖 MITHRA: Helps immune cell function, wound healing, and growth.",
+  "probiotics benefits": "🤖 MITHRA: Support gut health, digestion, and immune system balance.",
+  "hygiene importance": "🤖 MITHRA: Hand washing, oral care, clean environment prevents infections.",
+  "vaccination importance": "🤖 MITHRA: Protects against infectious diseases and prevents outbreaks.",
+  "preventing seasonal flu": "🤖 MITHRA: Annual vaccine, hand hygiene, avoid close contact with sick people.",
+  "cold weather health tips": "🤖 MITHRA: Dress warmly, stay hydrated, maintain vitamin D, avoid prolonged exposure.",
+  "hydration in heat": "🤖 MITHRA: Drink water, electrolytes, avoid excessive sun exposure.",
+  "airborne diseases prevention": "🤖 MITHRA: Masks, ventilation, vaccination, hygiene, avoid crowded places.",
+
+  // Cardiovascular Health
+  "heart attack warning signs": "🤖 MITHRA: Chest pain, shortness of breath, nausea, sweating; call emergency services.",
+  "stroke symptoms": "🤖 MITHRA: Face drooping, arm weakness, speech difficulty; seek immediate medical attention.",
+  "cholesterol management": "🤖 MITHRA: Healthy diet, exercise, avoid smoking, medications if prescribed.",
+  "blood pressure monitoring": "🤖 MITHRA: Regular checks, reduce salt, exercise, manage stress, medications as needed.",
+  "healthy fats": "🤖 MITHRA: Include omega-3, olive oil, nuts; limit trans fats and saturated fats.",
+  "exercise for heart": "🤖 MITHRA: Cardio activities like walking, running, cycling, swimming 150 min/week.",
+  "smoking cessation benefits": "🤖 MITHRA: Reduces heart disease, lung disease, cancer risk, improves overall health.",
+  "salt reduction tips": "🤖 MITHRA: Limit processed foods, read labels, cook with herbs/spices instead of salt.",
+  "diabetes-heart link": "🤖 MITHRA: High blood sugar damages vessels; manage diabetes to protect heart health.",
+  "stress and heart": "🤖 MITHRA: Chronic stress increases heart risk; practice relaxation and exercise.",
+
+  // Respiratory Health
+  "asthma management": "🤖 MITHRA: Use prescribed inhalers, avoid triggers, regular checkups.",
+  "COPD prevention": "🤖 MITHRA: Avoid smoking, pollutants, get vaccinations, follow medical guidance.",
+  "allergy relief tips": "🤖 MITHRA: Identify triggers, antihistamines, reduce exposure, keep indoor clean.",
+  "cold vs flu": "🤖 MITHRA: Cold is mild, flu has fever, body aches, fatigue; rest and fluids help.",
+  "pneumonia prevention": "🤖 MITHRA: Vaccinations, hand hygiene, avoid smoking, maintain overall health.",
+  "tuberculosis awareness": "🤖 MITHRA: Early detection, medication adherence, avoid close contact when infectious.",
+  "lung health tips": "🤖 MITHRA: Avoid smoking, exercise, maintain air quality, vaccines if needed.",
+  "breathing exercises": "🤖 MITHRA: Deep breathing, diaphragmatic exercises improve lung capacity and relaxation.",
+  "secondhand smoke risks": "🤖 MITHRA: Causes respiratory diseases, heart risk; avoid exposure indoors and outdoors.",
+  "humidifier benefits": "🤖 MITHRA: Keeps air moist, reduces respiratory irritation, prevents dry throat/nose.",
+
+  // Digestive Health
+  "healthy digestion tips": "🤖 MITHRA: Eat fiber, stay hydrated, chew properly, avoid overeating, regular activity.",
+  "gut microbiome": "🤖 MITHRA: Supports immunity, digestion, mental health; balanced diet and probiotics help.",
+  "acid reflux management": "🤖 MITHRA: Avoid spicy/fatty foods, eat small meals, stay upright after eating.",
+  "constipation remedies": "🤖 MITHRA: Fiber-rich foods, water, exercise, establish regular bowel habits.",
+  "diarrhea care": "🤖 MITHRA: Hydrate, eat bland foods, avoid irritants; seek medical care if severe.",
+  "irritable bowel syndrome tips": "🤖 MITHRA: Avoid triggers, eat regular meals, stress management, hydration.",
+  "liver health advice": "🤖 MITHRA: Limit alcohol, maintain healthy weight, balanced diet, regular checkups.",
+  "kidney care tips": "🤖 MITHRA: Hydration, limit salt, avoid overuse of painkillers, monitor blood pressure.",
+  "food poisoning response": "🤖 MITHRA: Hydrate, rest, avoid solid foods until stable, seek medical attention if needed.",
+  "healthy weight management": "🤖 MITHRA: Balanced diet, regular exercise, monitor calorie intake, avoid crash diets.",
+
+  // Musculoskeletal Health
+  "back pain prevention": "🤖 MITHRA: Proper posture, ergonomic chairs, regular movement, core strengthening.",
+  "joint health tips": "🤖 MITHRA: Exercise, maintain healthy weight, calcium and vitamin D intake.",
+  "arthritis exercises": "🤖 MITHRA: Low-impact activities like swimming, walking, stretching, strengthening exercises.",
+  "osteoporosis risk factors": "🤖 MITHRA: Age, gender, low calcium/vitamin D, sedentary lifestyle, smoking.",
+  "muscle recovery": "🤖 MITHRA: Protein intake, rest, stretching, adequate sleep, hydration.",
+  "injury prevention": "🤖 MITHRA: Warm-up, proper technique, protective gear, avoid overtraining.",
+  "posture improvement": "🤖 MITHRA: Strengthen core, mindful sitting, ergonomics, stretching breaks.",
+  "physical therapy benefits": "🤖 MITHRA: Helps recover from injury, improve mobility, strength, and reduce pain.",
+  "sports nutrition": "🤖 MITHRA: Protein, carbs, hydration, balanced meals before and after exercise.",
+  "hydration during exercise": "🤖 MITHRA: Drink water before, during, after exercise; replenish electrolytes if needed.",
+
+  // Skin & Hair
+  "acne management": "🤖 MITHRA: Gentle cleansing, avoid picking, topical treatments, balanced diet, hydration.",
+  "eczema care": "🤖 MITHRA: Moisturize regularly, avoid irritants, use prescribed medications.",
+  "psoriasis tips": "🤖 MITHRA: Moisturize, manage stress, avoid triggers, follow medical guidance.",
+  "sun protection": "🤖 MITHRA: Sunscreen SPF30+, protective clothing, avoid peak sun hours.",
+  "hair loss causes": "🤖 MITHRA: Genetics, stress, nutrition, hormonal imbalances, medications.",
+  "dandruff remedies": "🤖 MITHRA: Anti-dandruff shampoo, avoid harsh chemicals, maintain scalp hygiene.",
+  "skin hydration": "🤖 MITHRA: Moisturize daily, drink water, avoid hot showers, use gentle cleansers.",
+  "anti-aging skin care": "🤖 MITHRA: Sunscreen, hydration, antioxidants, avoid smoking, balanced diet.",
+  "wound care": "🤖 MITHRA: Clean with mild antiseptic, cover with sterile dressing, monitor for infection.",
+  "nail health tips": "🤖 MITHRA: Keep nails clean, trim regularly, avoid harsh chemicals, maintain nutrition."
+
 
 
 };
@@ -1460,6 +1905,7 @@ async function sendMessage() {
 document.getElementById("user-input").addEventListener("keypress", function(e){
   if(e.key === "Enter") sendMessage();
 });
+
 
 
 
