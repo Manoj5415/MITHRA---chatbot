@@ -1,6 +1,6 @@
 const chatWindow = document.getElementById("chat-window");
 
-// Offline Knowledge Base (~150+ questions can be expanded)
+
 const healthFAQ = {
   // Greetings
   "hi": "🤖 MITHRA: Hello! How can I help you today?",
@@ -261,8 +261,7 @@ const healthFAQ = {
   "what are vitamins": "Vitamins are essential nutrients that help the body function properly.",
   "what are minerals": "Minerals like calcium, iron, and zinc support bones, blood, and immunity.",
   "importance of water": "Water is vital for hydration, digestion, temperature regulation, and health."
- // Part 4: Health FAQ (901–1200)
-const healthFAQ_part4 = {
+
   "what is cancer": "Cancer is uncontrolled growth of abnormal cells in the body.",
   "symptoms of cancer": "Unexplained weight loss, fatigue, lumps, persistent cough, abnormal bleeding.",
   "prevention of cancer": "Avoid smoking, eat healthy, exercise, and get regular screenings.",
@@ -374,8 +373,8 @@ const healthFAQ_part4 = {
   "what is gastritis": "Gastritis is inflammation of the stomach lining.",
   "symptoms of gastritis": "Stomach pain, nausea, bloating, loss of appetite.",
   "treatment of gastritis": "Medicines, diet changes, avoid alcohol and spicy food."
-  // Part 5: Health FAQ (1201–1500)
-const healthFAQ_part5 = {
+ 
+
   "what is dehydration": "Dehydration happens when the body loses more fluids than it takes in.",
   "symptoms of dehydration": "Thirst, dry mouth, dizziness, dark urine, fatigue.",
   "prevention of dehydration": "Drink plenty of fluids, especially in hot weather or during exercise.",
@@ -508,8 +507,7 @@ const healthFAQ_part5 = {
   "eye care tips": "Regular checkups, limit screen time, good lighting.",
   "what is hearing care": "Protect ears from loud noise, clean ears safely, regular checkups.",
   "importance of regular checkups": "Helps detect diseases early and prevent complications."
-  const healthFAQ = {
-  // 1501–1800: Expanded Health Topics
+
 
   // Dental & Oral Health
   "toothache": "🤖 MITHRA: For toothache, rinse your mouth with warm salt water and consult a dentist if pain persists.",
@@ -618,7 +616,266 @@ const healthFAQ_part5 = {
   "pregnancy test": "🤖 MITHRA: Detects pregnancy through hormone levels.",
   "allergy test": "🤖 MITHRA: Determines allergic reactions to substances.",
   "covid test": "🤖 MITHRA: PCR or rapid antigen tests confirm COVID-19 infection."
-  
+    "wrinkles": "🤖 MITHRA: Use sunscreen, moisturize regularly, and maintain a healthy diet to reduce wrinkles.",
+  "eczema flare": "🤖 MITHRA: Avoid triggers, moisturize, and consult a dermatologist for flare management.",
+  "psoriasis care": "🤖 MITHRA: Follow medicated creams, stress management, and regular dermatologist checkups.",
+  "sun protection": "🤖 MITHRA: Apply sunscreen, wear protective clothing, and avoid direct sunlight during peak hours.",
+  "allergic rash": "🤖 MITHRA: Avoid allergens, apply soothing creams, and consult a doctor if severe.",
+  "acne scars": "🤖 MITHRA: Use dermatologist-recommended treatments like retinoids or laser therapy.",
+  "skin hydration": "🤖 MITHRA: Drink water, use moisturizers, and avoid harsh soaps.",
+  "pimples": "🤖 MITHRA: Avoid squeezing, keep the skin clean, and use topical treatments.",
+  "blackheads": "🤖 MITHRA: Cleanse, exfoliate gently, and avoid heavy makeup.",
+  "dry lips": "🤖 MITHRA: Apply lip balm, hydrate, and avoid licking lips frequently.",
+
+  // Hair Care
+  "hair growth": "🤖 MITHRA: Eat protein-rich foods, massage scalp, and avoid harsh chemicals.",
+  "split ends": "🤖 MITHRA: Trim regularly and use nourishing hair oils.",
+  "gray hair": "🤖 MITHRA: Nutrition and antioxidants can slow graying; hair dye is cosmetic.",
+  "alopecia": "🤖 MITHRA: Consult a dermatologist for diagnosis and treatment options.",
+  "hair dandruff": "🤖 MITHRA: Use anti-dandruff shampoos, maintain scalp hygiene, and manage stress.",
+  "oily scalp": "🤖 MITHRA: Wash regularly, avoid heavy products, and maintain a balanced diet.",
+  "dry scalp": "🤖 MITHRA: Use moisturizing shampoos and oils to prevent flaking.",
+  "hair styling damage": "🤖 MITHRA: Limit heat styling, avoid tight hairstyles, and use protective products.",
+  "hair loss causes": "🤖 MITHRA: Stress, hormones, diet, and genetics can contribute to hair loss.",
+  "healthy hair tips": "🤖 MITHRA: Balanced diet, hydration, gentle washing, and regular trims maintain healthy hair.",
+
+  // Digestive Health
+  "acid reflux": "🤖 MITHRA: Avoid spicy foods, eat smaller meals, and consult a doctor if frequent.",
+  "indigestion": "🤖 MITHRA: Eat slowly, avoid overeating, and drink plenty of water.",
+  "constipation remedies": "🤖 MITHRA: Increase fiber intake, hydrate, and exercise regularly.",
+  "diarrhea remedies": "🤖 MITHRA: Hydrate, eat light foods, and consult a doctor if persistent.",
+  "stomach ulcer": "🤖 MITHRA: Avoid NSAIDs, manage stress, and consult a gastroenterologist.",
+  "gas problems": "🤖 MITHRA: Avoid carbonated drinks, eat slowly, and include fiber in diet.",
+  "irritable bowel": "🤖 MITHRA: Manage stress, monitor trigger foods, and follow medical advice.",
+  "liver health tips": "🤖 MITHRA: Limit alcohol, eat balanced meals, and exercise regularly.",
+  "kidney health tips": "🤖 MITHRA: Stay hydrated, reduce salt, and get regular checkups.",
+  "digestive enzymes": "🤖 MITHRA: Help break down food; consult a doctor before supplementation.",
+
+  // Cardiovascular & Metabolic Health
+  "high blood pressure": "🤖 MITHRA: Reduce salt, exercise, and monitor blood pressure regularly.",
+  "low blood pressure": "🤖 MITHRA: Stay hydrated, eat small frequent meals, and avoid sudden posture changes.",
+  "cholesterol management": "🤖 MITHRA: Eat healthy fats, reduce processed foods, and exercise regularly.",
+  "heart attack symptoms": "🤖 MITHRA: Chest pain, shortness of breath, and nausea require immediate medical attention.",
+  "stroke symptoms": "🤖 MITHRA: Sudden weakness, slurred speech, or facial droop need emergency care.",
+  "diabetes management": "🤖 MITHRA: Monitor blood sugar, eat balanced meals, and follow prescribed medications.",
+  "obesity management": "🤖 MITHRA: Combine diet, exercise, and behavioral changes to maintain healthy weight.",
+  "metabolic syndrome": "🤖 MITHRA: Manage blood sugar, cholesterol, and blood pressure with lifestyle changes.",
+  "heart health tips": "🤖 MITHRA: Exercise, eat balanced meals, avoid smoking, and get regular checkups.",
+  "circulation problems": "🤖 MITHRA: Exercise, avoid prolonged sitting, and consult a doctor if persistent.",
+
+  // Respiratory Health
+  "asthma": "🤖 MITHRA: Avoid triggers, use inhalers as prescribed, and monitor symptoms.",
+  "allergic rhinitis": "🤖 MITHRA: Avoid allergens, use antihistamines, and consult a doctor if severe.",
+  "bronchitis": "🤖 MITHRA: Rest, hydrate, and consult a doctor if symptoms persist.",
+  "pneumonia": "🤖 MITHRA: Seek immediate medical care; maintain hydration and rest.",
+  "cough remedies": "🤖 MITHRA: Stay hydrated, use honey or lozenges, and consult a doctor if persistent.",
+  "shortness of breath": "🤖 MITHRA: Seek immediate medical attention if severe or sudden.",
+  "lung health tips": "🤖 MITHRA: Avoid smoking, exercise regularly, and maintain air quality.",
+  "COPD": "🤖 MITHRA: Follow medical advice, avoid smoking, and use prescribed inhalers.",
+  "respiratory infection": "🤖 MITHRA: Rest, hydrate, and seek medical attention if severe or prolonged.",
+  "sleep apnea": "🤖 MITHRA: Use CPAP devices if prescribed, sleep on the side, and maintain healthy weight.",
+
+  // Women’s Health & Pregnancy
+  "menstrual cramps": "🤖 MITHRA: Use heat pads, mild painkillers, and exercise to relieve cramps.",
+  "PMS": "🤖 MITHRA: Maintain balanced diet, exercise, and track symptoms for management.",
+  "pregnancy nutrition": "🤖 MITHRA: Eat protein, iron, calcium, and stay hydrated for healthy pregnancy.",
+  "morning sickness": "🤖 MITHRA: Eat small meals, stay hydrated, and consult a doctor if severe.",
+  "labor signs": "🤖 MITHRA: Regular contractions, water breaking, and back pain indicate labor.",
+  "postpartum care": "🤖 MITHRA: Rest, maintain nutrition, and monitor for postpartum depression.",
+  "breastfeeding tips": "🤖 MITHRA: Nurse on demand, stay hydrated, and maintain healthy diet.",
+  "menopause": "🤖 MITHRA: Manage symptoms with diet, exercise, and consult a doctor for hormone therapy.",
+  "ovarian health": "🤖 MITHRA: Regular checkups, balanced diet, and awareness of symptoms help maintain health.",
+  "reproductive health": "🤖 MITHRA: Regular screenings, hygiene, and safe practices are essential.",
+
+  // Men’s Health
+  "prostate check": "🤖 MITHRA: Regular screenings after 50, maintain healthy diet, and exercise.",
+  "erectile dysfunction": "🤖 MITHRA: Consult a doctor; lifestyle changes and medications can help.",
+  "testosterone levels": "🤖 MITHRA: Exercise, balanced diet, and sleep maintain healthy hormone levels.",
+  "male fertility": "🤖 MITHRA: Avoid smoking, maintain healthy weight, and consult a doctor for concerns.",
+  "sexual health tips": "🤖 MITHRA: Practice safe sex, regular checkups, and awareness of STDs.",
+  "male hygiene": "🤖 MITHRA: Daily cleaning, proper grooming, and wearing breathable clothing.",
+  "hair loss in men": "🤖 MITHRA: Genetics, stress, and nutrition affect hair loss; consult a dermatologist.",
+  "prostate health tips": "🤖 MITHRA: Exercise, healthy diet, and regular checkups maintain prostate health.",
+  "urinary health men": "🤖 MITHRA: Stay hydrated, maintain hygiene, and consult a doctor for frequent issues.",
+  "men’s mental health": "🤖 MITHRA: Stress management, social support, and counseling improve mental well-being."
+  // Mental Health & Well-being
+  "anxiety": "🤖 MITHRA: Practice mindfulness, deep breathing, and seek counseling if persistent.",
+  "depression": "🤖 MITHRA: Talk to a mental health professional, maintain routine, and stay connected.",
+  "stress management": "🤖 MITHRA: Exercise, meditation, and hobbies help reduce stress levels.",
+  "sleep disorders": "🤖 MITHRA: Maintain sleep hygiene, avoid caffeine late, and consult a doctor if needed.",
+  "panic attack": "🤖 MITHRA: Practice controlled breathing, stay calm, and seek medical advice if frequent.",
+  "mood swings": "🤖 MITHRA: Balanced diet, sleep, and stress management improve emotional stability.",
+  "mental clarity": "🤖 MITHRA: Meditation, hydration, proper sleep, and reduced screen time help clarity.",
+  "focus improvement": "🤖 MITHRA: Break tasks, avoid distractions, and practice mindfulness.",
+  "memory enhancement": "🤖 MITHRA: Sleep well, eat brain-healthy foods, and practice mental exercises.",
+  "social anxiety": "🤖 MITHRA: Gradual exposure, therapy, and social support can improve confidence.",
+
+  // Eye Health
+  "eye strain": "🤖 MITHRA: Take breaks from screens, use proper lighting, and practice eye exercises.",
+  "dry eyes": "🤖 MITHRA: Use artificial tears, stay hydrated, and avoid prolonged screen time.",
+  "vision care": "🤖 MITHRA: Regular eye checkups, sunglasses, and healthy diet help maintain vision.",
+  "glaucoma": "🤖 MITHRA: Early detection through regular checkups is crucial; follow prescribed treatment.",
+  "cataract": "🤖 MITHRA: Surgery is the main treatment; maintain eye health with nutrition and eye care.",
+  "eye infection": "🤖 MITHRA: Avoid touching eyes, maintain hygiene, and consult a doctor for treatment.",
+  "contact lens care": "🤖 MITHRA: Clean lenses properly, avoid sleeping with lenses, and follow usage guidelines.",
+  "color blindness": "🤖 MITHRA: No cure; use adaptive strategies and assistive tools.",
+  "night vision": "🤖 MITHRA: Ensure proper vitamin A intake, avoid smoking, and have regular eye exams.",
+  "ocular allergies": "🤖 MITHRA: Avoid allergens, use antihistamine drops, and consult a doctor if severe.",
+
+  // Ear, Nose & Throat (ENT)
+  "ear infection": "🤖 MITHRA: Keep ears dry, avoid inserting objects, and consult a doctor if pain persists.",
+  "hearing loss": "🤖 MITHRA: Regular checkups, avoid loud noise, and use hearing aids if prescribed.",
+  "tinnitus": "🤖 MITHRA: Avoid loud sounds, manage stress, and consult an ENT specialist.",
+  "sinusitis": "🤖 MITHRA: Hydrate, use saline sprays, and consult a doctor if persistent.",
+  "sore throat": "🤖 MITHRA: Gargle with warm salt water, hydrate, and consult a doctor if severe.",
+  "tonsillitis": "🤖 MITHRA: Rest, hydration, and medical care if bacterial infection is suspected.",
+  "nasal congestion": "🤖 MITHRA: Steam inhalation, saline sprays, and avoid allergens help relieve symptoms.",
+  "vertigo": "🤖 MITHRA: Avoid sudden movements, consult a doctor, and practice balance exercises.",
+  "ear wax": "🤖 MITHRA: Do not use cotton swabs; consult a doctor for safe removal.",
+  "allergic rhinitis care": "🤖 MITHRA: Avoid triggers, use antihistamines, and maintain clean environment.",
+
+  // Musculoskeletal Health
+  "back pain": "🤖 MITHRA: Maintain posture, stretch regularly, and avoid heavy lifting.",
+  "joint pain": "🤖 MITHRA: Exercise, maintain healthy weight, and consult a doctor if persistent.",
+  "arthritis": "🤖 MITHRA: Medications, physical therapy, and low-impact exercise help manage symptoms.",
+  "osteoporosis": "🤖 MITHRA: Ensure calcium and vitamin D intake, exercise, and monitor bone health.",
+  "muscle cramps": "🤖 MITHRA: Stretching, hydration, and electrolyte balance prevent cramps.",
+  "sciatica": "🤖 MITHRA: Exercise, posture correction, and medical treatment can reduce pain.",
+  "sports injury": "🤖 MITHRA: Rest, ice, compression, elevation, and consult a doctor if severe.",
+  "fibromyalgia": "🤖 MITHRA: Pain management, exercise, stress reduction, and counseling help manage symptoms.",
+  "spinal health": "🤖 MITHRA: Maintain posture, exercise core muscles, and avoid prolonged sitting.",
+  "physical therapy": "🤖 MITHRA: Helps restore mobility, strength, and reduces pain after injury.",
+
+  // Immunizations & Preventive Health
+  "vaccination schedule": "🤖 MITHRA: Follow local guidelines for timely vaccines for children and adults.",
+  "flu shot": "🤖 MITHRA: Recommended annually to prevent influenza complications.",
+  "tdap vaccine": "🤖 MITHRA: Protects against tetanus, diphtheria, and pertussis; follow schedule.",
+  "hepatitis vaccine": "🤖 MITHRA: Recommended for children and adults based on risk factors.",
+  "covid vaccine": "🤖 MITHRA: Protects against COVID-19; follow local health authority recommendations.",
+  "hpv vaccine": "🤖 MITHRA: Helps prevent cervical and other cancers; recommended for teens and young adults.",
+  "pneumococcal vaccine": "🤖 MITHRA: Recommended for older adults and people with certain conditions.",
+  "measles vaccine": "🤖 MITHRA: Prevents measles; follow childhood immunization schedule.",
+  "rabies vaccine": "🤖 MITHRA: For pre-exposure or post-exposure prophylaxis; consult a doctor after animal bites.",
+  "shingles vaccine": "🤖 MITHRA: Recommended for older adults to prevent shingles and complications."
+    // Digestive Health
+  "acid reflux": "🤖 MITHRA: Avoid spicy foods, eat smaller meals, and consult a doctor if frequent.",
+  "heartburn": "🤖 MITHRA: Avoid late meals, caffeine, and maintain upright posture after eating.",
+  "ulcer": "🤖 MITHRA: Follow doctor-prescribed medication, avoid irritants, and maintain a healthy diet.",
+  "ibs": "🤖 MITHRA: Manage stress, follow a fiber-rich diet, and consult a gastroenterologist.",
+  "constipation relief": "🤖 MITHRA: Drink plenty of water, eat fiber-rich foods, and exercise regularly.",
+  "diarrhea care": "🤖 MITHRA: Hydrate, avoid junk food, and consult a doctor if prolonged.",
+  "liver care": "🤖 MITHRA: Avoid alcohol, maintain a healthy diet, and get regular checkups.",
+  "kidney health": "🤖 MITHRA: Stay hydrated, control blood pressure, and limit salt intake.",
+  "gallstones": "🤖 MITHRA: Healthy diet and medical consultation are necessary for management.",
+  "pancreatitis": "🤖 MITHRA: Avoid alcohol, fatty foods, and follow medical guidance.",
+
+  // Cardiovascular Health
+  "heart attack": "🤖 MITHRA: Seek emergency care immediately, chew aspirin if advised, and stay calm.",
+  "angina": "🤖 MITHRA: Follow doctor’s advice, manage stress, and avoid exertion during pain.",
+  "stroke prevention": "🤖 MITHRA: Control blood pressure, exercise, and eat a balanced diet.",
+  "cholesterol management": "🤖 MITHRA: Reduce fatty foods, exercise regularly, and follow medical advice.",
+  "high blood pressure": "🤖 MITHRA: Reduce salt intake, exercise, avoid stress, and monitor regularly.",
+  "low blood pressure": "🤖 MITHRA: Stay hydrated, avoid sudden standing, and consult a doctor if symptomatic.",
+  "heart health tips": "🤖 MITHRA: Exercise, eat healthy, avoid smoking, and regular checkups are essential.",
+  "arrhythmia": "🤖 MITHRA: Follow doctor’s medication, monitor heart rate, and avoid stimulants.",
+  "palpitations": "🤖 MITHRA: Reduce caffeine, manage stress, and consult a doctor if frequent.",
+  "cardiovascular fitness": "🤖 MITHRA: Regular aerobic exercise improves heart health and stamina.",
+
+  // Respiratory Health
+  "asthma": "🤖 MITHRA: Use inhalers as prescribed, avoid triggers, and monitor symptoms.",
+  "copd": "🤖 MITHRA: Avoid smoking, follow medication, and engage in breathing exercises.",
+  "bronchitis": "🤖 MITHRA: Hydrate, rest, and consult a doctor if symptoms persist.",
+  "pneumonia": "🤖 MITHRA: Seek medical treatment, rest, and hydrate adequately.",
+  "cough relief": "🤖 MITHRA: Stay hydrated, use honey or lozenges, and consult a doctor if persistent.",
+  "shortness of breath": "🤖 MITHRA: Seek medical attention immediately if severe or sudden.",
+  "allergic asthma": "🤖 MITHRA: Avoid allergens, use prescribed medications, and monitor symptoms.",
+  "lung health": "🤖 MITHRA: Avoid smoking, exercise, and maintain good indoor air quality.",
+  "sleep apnea": "🤖 MITHRA: Maintain healthy weight, use CPAP if prescribed, and consult a sleep specialist.",
+  "respiratory infections": "🤖 MITHRA: Hand hygiene, vaccination, and avoiding crowded places help prevent infections.",
+
+  // Skin, Hair & Nail Health
+  "acne": "🤖 MITHRA: Maintain hygiene, use gentle cleansers, and consult a dermatologist for severe cases.",
+  "eczema": "🤖 MITHRA: Moisturize regularly, avoid irritants, and follow prescribed treatments.",
+  "psoriasis": "🤖 MITHRA: Use prescribed creams, avoid stress, and maintain a healthy lifestyle.",
+  "hair loss": "🤖 MITHRA: Balanced diet, avoid harsh treatments, and consult a dermatologist if persistent.",
+  "dandruff": "🤖 MITHRA: Use anti-dandruff shampoos, maintain hygiene, and avoid stress.",
+  "nail health": "🤖 MITHRA: Keep nails clean, moisturize, and avoid biting or harsh chemicals.",
+  "sun protection": "🤖 MITHRA: Use sunscreen, wear protective clothing, and avoid prolonged sun exposure.",
+  "skin cancer prevention": "🤖 MITHRA: Regular skin checks, sun protection, and avoiding tanning beds.",
+  "allergic skin reaction": "🤖 MITHRA: Avoid allergen, use antihistamines, and consult a doctor if severe.",
+  "hydration for skin": "🤖 MITHRA: Drink plenty of water and use moisturizers to keep skin healthy.",
+
+  // Women’s Health
+  "pcos": "🤖 MITHRA: Maintain a healthy weight, balanced diet, exercise, and consult a doctor for management.",
+  "pms relief": "🤖 MITHRA: Exercise, balanced diet, and stress management help reduce symptoms.",
+  "menopause": "🤖 MITHRA: Lifestyle changes, hormone therapy, and regular checkups help manage symptoms.",
+  "fertility tips": "🤖 MITHRA: Maintain healthy lifestyle, track ovulation, and consult a fertility specialist if needed.",
+  "breast self-exam": "🤖 MITHRA: Perform monthly self-checks and consult a doctor for abnormalities.",
+  "menstrual hygiene": "🤖 MITHRA: Use clean products, change regularly, and maintain hygiene.",
+  "pregnancy care": "🤖 MITHRA: Regular checkups, proper nutrition, and avoid harmful substances.",
+  "prenatal vitamins": "🤖 MITHRA: Support fetal development; follow doctor’s guidance.",
+  "labor preparation": "🤖 MITHRA: Attend prenatal classes, exercise safely, and follow doctor’s instructions.",
+  "postpartum care": "🤖 MITHRA: Rest, proper nutrition, mental health support, and follow-up checkups.",
+
+  // Men’s Health
+  "prostate check": "🤖 MITHRA: Regular checkups help detect prostate issues early.",
+  "testosterone health": "🤖 MITHRA: Exercise, proper sleep, nutrition, and medical consultation if low.",
+  "erectile dysfunction": "🤖 MITHRA: Consult a doctor, maintain healthy lifestyle, and manage stress.",
+  "male fertility": "🤖 MITHRA: Balanced diet, avoid smoking and alcohol, and seek medical advice if needed.",
+  "urinary health": "🤖 MITHRA: Hydrate, maintain hygiene, and consult a doctor if symptoms appear.",
+  "hair loss men": "🤖 MITHRA: Balanced diet, avoid harsh treatments, and consult a dermatologist if persistent.",
+  "muscle building": "🤖 MITHRA: Regular strength training, protein-rich diet, and proper rest.",
+  "cardiac health men": "🤖 MITHRA: Exercise, balanced diet, regular checkups, and avoid smoking.",
+  "mental health men": "🤖 MITHRA: Reduce stress, socialize, and seek counseling if needed.",
+  "sexual health men": "🤖 MITHRA: Practice safe sex, regular checkups, and maintain healthy lifestyle."
+ 
+  // Mental Health & Well-being
+  "anxiety": "🤖 MITHRA: Practice mindfulness, deep breathing, and consult a professional if severe.",
+  "depression": "🤖 MITHRA: Seek therapy, maintain social connections, exercise, and consult a doctor.",
+  "stress management": "🤖 MITHRA: Meditation, time management, and regular breaks help reduce stress.",
+  "sleep disorders": "🤖 MITHRA: Maintain sleep hygiene, avoid screens before bed, and consult a specialist if persistent.",
+  "mental fatigue": "🤖 MITHRA: Take breaks, rest adequately, and manage workload effectively.",
+  "panic attacks": "🤖 MITHRA: Practice controlled breathing, stay calm, and seek professional help if frequent.",
+  "mood swings": "🤖 MITHRA: Regular sleep, balanced diet, and counseling can help manage mood changes.",
+  "self-care tips": "🤖 MITHRA: Exercise, proper nutrition, adequate rest, and leisure activities support mental health.",
+  "work-life balance": "🤖 MITHRA: Set boundaries, manage time, and prioritize mental well-being.",
+  "coping with grief": "🤖 MITHRA: Talk to friends/family, express emotions, and seek professional support.",
+
+  // Eye & Ear Health
+  "eye strain": "🤖 MITHRA: Follow the 20-20-20 rule, reduce screen time, and use proper lighting.",
+  "vision care": "🤖 MITHRA: Eat vitamin-rich foods, get regular eye exams, and protect eyes from UV.",
+  "glaucoma": "🤖 MITHRA: Regular eye checkups, medication, and avoid high pressure in eyes.",
+  "cataracts": "🤖 MITHRA: Early detection, proper lighting, and surgery if prescribed by a doctor.",
+  "hearing loss": "🤖 MITHRA: Avoid loud noise, get regular hearing checkups, and consult an audiologist.",
+  "ear infection": "🤖 MITHRA: Keep ears dry, follow medical treatment, and avoid inserting objects.",
+  "tinnitus": "🤖 MITHRA: Reduce stress, avoid loud noise, and consult an ENT specialist.",
+  "eye irritation": "🤖 MITHRA: Use lubricating drops, avoid allergens, and consult a doctor if persistent.",
+  "eye dryness": "🤖 MITHRA: Stay hydrated, use artificial tears, and avoid excessive screen exposure.",
+  "vision improvement tips": "🤖 MITHRA: Eye exercises, healthy diet, proper lighting, and regular checkups.",
+
+  // Immunity & Infection
+  "flu shot": "🤖 MITHRA: Annual vaccination helps prevent seasonal flu.",
+  "covid precautions": "🤖 MITHRA: Mask, hand hygiene, social distancing, and vaccination reduce risk.",
+  "immune boosting": "🤖 MITHRA: Eat nutritious food, exercise, sleep well, and manage stress.",
+  "infection prevention": "🤖 MITHRA: Wash hands, maintain hygiene, and avoid contact with sick individuals.",
+  "cold remedies": "🤖 MITHRA: Rest, hydrate, warm fluids, and consult a doctor if severe.",
+  "fever management": "🤖 MITHRA: Stay hydrated, rest, and monitor temperature; consult a doctor if high.",
+  "vaccination importance": "🤖 MITHRA: Protects against serious diseases and promotes herd immunity.",
+  "antibiotic use": "🤖 MITHRA: Take only as prescribed and complete the full course.",
+  "viral infections": "🤖 MITHRA: Supportive care, rest, and hydration help recovery.",
+  "bacterial infections": "🤖 MITHRA: Follow medical treatment, hygiene, and preventive measures.",
+
+  // Children & Parenting
+  "child nutrition": "🤖 MITHRA: Balanced meals, fruits, vegetables, and adequate hydration are essential.",
+  "child immunization": "🤖 MITHRA: Follow the vaccination schedule recommended by healthcare providers.",
+  "child hygiene": "🤖 MITHRA: Teach handwashing, dental care, and personal hygiene habits.",
+  "child mental health": "🤖 MITHRA: Encourage social interaction, play, and emotional expression.",
+  "child growth milestones": "🤖 MITHRA: Monitor development, consult a pediatrician for concerns.",
+  "child sleep": "🤖 MITHRA: Maintain consistent bedtime routines and sufficient sleep.",
+  "child exercise": "🤖 MITHRA: Encourage physical activity suitable for age.",
+  "child safety": "🤖 MITHRA: Use safety equipment, supervise activities, and educate about hazards.",
+  "child learning tips": "🤖 MITHRA: Support curiosity, provide age-appropriate challenges, and positive reinforcement.",
+  "child behavior management": "🤖 MITHRA: Use consistent rules, positive reinforcement, and communication."
 };
 
 // AI fallback using Hugging Face free API
@@ -677,5 +934,6 @@ async function sendMessage() {
 document.getElementById("user-input").addEventListener("keypress", function(e){
   if(e.key === "Enter") sendMessage();
 });
+
 
 
