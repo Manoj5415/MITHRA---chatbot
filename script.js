@@ -519,20 +519,35 @@ function editDistance(a, b) {
 // ------------------------------
 // AI fallback (Hugging Face)
 // ------------------------------
+// AI fallback using Hugging Face Inference API
 async function getAIAnswer(question) {
   try {
-    const response = await fetch("https://api-inference.huggingface.co/models/gpt2", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ inputs: `You are MITHRA, a helpful health assistant. Answer clearly: ${question}` })
-    });
+    const response = await fetch(
+      "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          inputs: `You are MITHRA, a helpful health assistant. 
+          Answer the question in a clear, short, and safe way. 
+          Always remind to consult a doctor if it’s serious. 
+          Question: ${question}`
+        })
+      }
+    );
+
     const data = await response.json();
-    if (data && data[0]?.generated_text) return "🤖 MITHRA: " + data[0].generated_text;
-    return "🤖 MITHRA: Sorry, I couldn't generate an answer.";
+
+    if (data && data[0]?.generated_text) {
+      return "🤖 MITHRA: " + data[0].generated_text;
+    }
+
+    return "🤖 MITHRA: Sorry, I couldn’t generate an answer.";
   } catch (error) {
     return "🤖 MITHRA: AI server error, please try again later.";
   }
 }
+
 
 // ------------------------------
 // Main answer function
@@ -588,3 +603,4 @@ sendBtn.addEventListener("click", sendMessage);
 userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") sendMessage();
 });
+
