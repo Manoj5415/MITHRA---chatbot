@@ -464,22 +464,27 @@ const healthFAQ = {
 };
 
 
-// Autocorrection / suggestion function
-function getClosestMatch(question) {
+// ------------------------------
+// Auto-correction + similarity
+// ------------------------------
+function getClosestKey(input) {
   const keys = Object.keys(healthFAQ);
-  let maxScore = 0;
   let bestMatch = null;
+  let bestScore = 0;
+
   for (let key of keys) {
-    let score = similarity(key, question);
-    if (score > maxScore) {
-      maxScore = score;
+    const score = similarity(input, key);
+    if (score > bestScore) {
+      bestScore = score;
       bestMatch = key;
     }
   }
-  return maxScore > 0.5 ? healthFAQ[bestMatch] : null; // Only if similarity > 0.5
+
+  // Accept correction if similarity > 0.6
+  return bestScore > 0.6 ? bestMatch : null;
 }
 
-// Simple similarity function (Levenshtein ratio)
+// Simple similarity (Levenshtein ratio)
 function similarity(a, b) {
   a = a.toLowerCase();
   b = b.toLowerCase();
@@ -492,21 +497,18 @@ function similarity(a, b) {
 
 function editDistance(a, b) {
   const matrix = [];
-  for (let i = 0; i <= b.length; i++) {
-    matrix[i] = [i];
-  }
-  for (let j = 0; j <= a.length; j++) {
-    matrix[0][j] = j;
-  }
+  for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+
   for (let i = 1; i <= b.length; i++) {
     for (let j = 1; j <= a.length; j++) {
       if (b.charAt(i - 1) === a.charAt(j - 1)) {
         matrix[i][j] = matrix[i - 1][j - 1];
       } else {
         matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j] + 1
+          matrix[i - 1][j - 1] + 1, // substitution
+          matrix[i][j - 1] + 1,     // insertion
+          matrix[i - 1][j] + 1      // deletion
         );
       }
     }
@@ -514,37 +516,48 @@ function editDistance(a, b) {
   return matrix[b.length][a.length];
 }
 
-// AI fallback using Hugging Face free API
+// ------------------------------
+// AI fallback (Hugging Face)
+// ------------------------------
 async function getAIAnswer(question) {
   try {
     const response = await fetch("https://api-inference.huggingface.co/models/gpt2", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ inputs: `You are MITHRA, a helpful health assistant. Answer the question: ${question}` })
+      body: JSON.stringify({ inputs: `You are MITHRA, a helpful health assistant. Answer clearly: ${question}` })
     });
     const data = await response.json();
-    if (data && data[0]?.generated_text) return data[0].generated_text;
+    if (data && data[0]?.generated_text) return "🤖 MITHRA: " + data[0].generated_text;
     return "🤖 MITHRA: Sorry, I couldn't generate an answer.";
   } catch (error) {
     return "🤖 MITHRA: AI server error, please try again later.";
   }
 }
 
-// Combined answer: offline first, suggestion, AI fallback
+// ------------------------------
+// Main answer function
+// ------------------------------
 async function getAnswer(question) {
   question = question.toLowerCase();
-  // Exact match
+
+  // 1. Exact match or contains
   for (let key in healthFAQ) {
     if (question.includes(key)) return healthFAQ[key];
   }
-  // Suggestion / closest match
-  const suggestion = getClosestMatch(question);
-  if (suggestion) return suggestion;
-  // AI fallback
+
+  // 2. Auto-correction / closest key
+  const correctedKey = getClosestKey(question);
+  if (correctedKey) {
+    return `🤖 MITHRA: Did you mean "${correctedKey}"? \n${healthFAQ[correctedKey]}`;
+  }
+
+  // 3. AI fallback
   return await getAIAnswer(question);
 }
 
-// Send message
+// ------------------------------
+// Chat UI handling
+// ------------------------------
 async function sendMessage() {
   const userText = userInput.value.trim();
   if (!userText) return;
@@ -572,7 +585,6 @@ async function sendMessage() {
 
 // Event listeners
 sendBtn.addEventListener("click", sendMessage);
-userInput.addEventListener("keypress", function(e) {
+userInput.addEventListener("keypress", function (e) {
   if (e.key === "Enter") sendMessage();
 });
-
