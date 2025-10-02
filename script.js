@@ -462,11 +462,18 @@ const healthFAQ = {
 "hydration elderly": "MITHRA: Drink enough water, monitor urine color, include hydrating foods."
 
 };
+// ---------------------------
+// Unsafe queries filter
+// ---------------------------
+const unsafeKeywords = [
+  "suicide", "kill myself", "overdose", "poison", "self harm",
+  "cut myself", "drug abuse", "illegal drugs", "hang", "die",
+  "commit suicide", "end my life", "painkillers overdose"
+];
 
-
-// ------------------------------
-// Auto-correction + similarity
-// ------------------------------
+// ---------------------------
+// Auto-correction / similarity
+// ---------------------------
 function getClosestKey(input) {
   const keys = Object.keys(healthFAQ);
   let bestMatch = null;
@@ -480,11 +487,9 @@ function getClosestKey(input) {
     }
   }
 
-  // Accept correction if similarity > 0.6
-  return bestScore > 0.6 ? bestMatch : null;
+  return bestScore > 0.6 ? bestMatch : null; // Accept if >60% similar
 }
 
-// Simple similarity (Levenshtein ratio)
 function similarity(a, b) {
   a = a.toLowerCase();
   b = b.toLowerCase();
@@ -506,9 +511,9 @@ function editDistance(a, b) {
         matrix[i][j] = matrix[i - 1][j - 1];
       } else {
         matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1, // substitution
-          matrix[i][j - 1] + 1,     // insertion
-          matrix[i - 1][j] + 1      // deletion
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
         );
       }
     }
@@ -516,10 +521,9 @@ function editDistance(a, b) {
   return matrix[b.length][a.length];
 }
 
-// ------------------------------
-// AI fallback (Hugging Face)
-// ------------------------------
-// AI fallback using Hugging Face Inference API
+// ---------------------------
+// AI Fallback: Hugging Face Falcon
+// ---------------------------
 async function getAIAnswer(question) {
   try {
     const response = await fetch(
@@ -528,9 +532,9 @@ async function getAIAnswer(question) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          inputs: `You are MITHRA, a helpful health assistant. 
-          Answer the question in a clear, short, and safe way. 
-          Always remind to consult a doctor if it’s serious. 
+          inputs: `You are MITHRA, a friendly health assistant.
+          Answer briefly, clearly, and safely.
+          Always remind the user to consult a doctor for serious issues.
           Question: ${question}`
         })
       }
@@ -539,7 +543,8 @@ async function getAIAnswer(question) {
     const data = await response.json();
 
     if (data && data[0]?.generated_text) {
-      return "🤖 MITHRA: " + data[0].generated_text;
+      return "🤖 MITHRA: " + data[0].generated_text +
+             "\n⚠️ Note: This is general information, not medical advice. Please consult a doctor for proper treatment.";
     }
 
     return "🤖 MITHRA: Sorry, I couldn’t generate an answer.";
@@ -548,49 +553,55 @@ async function getAIAnswer(question) {
   }
 }
 
-
-// ------------------------------
-// Main answer function
-// ------------------------------
+// ---------------------------
+// Main Answer Function
+// ---------------------------
 async function getAnswer(question) {
   question = question.toLowerCase();
 
-  // 1. Exact match or contains
+  // 1. Check unsafe queries
+  for (let word of unsafeKeywords) {
+    if (question.includes(word)) {
+      return "⚠️ MITHRA: I’m really concerned about your safety. I cannot provide guidance on this. Please reach out to a trusted friend, family member, or a healthcare professional immediately.\n\n📞 If you are in India, call the Vandrevala Foundation Helpline at 1860 266 2345 or the Snehi Helpline at +91-9582208181.\n\nIf outside India, please dial your local emergency number.";
+    }
+  }
+
+  // 2. Exact match FAQ
   for (let key in healthFAQ) {
     if (question.includes(key)) return healthFAQ[key];
   }
 
-  // 2. Auto-correction / closest key
+  // 3. Auto-correction suggestion
   const correctedKey = getClosestKey(question);
   if (correctedKey) {
     return `🤖 MITHRA: Did you mean "${correctedKey}"? \n${healthFAQ[correctedKey]}`;
   }
 
-  // 3. AI fallback
+  // 4. AI fallback
   return await getAIAnswer(question);
 }
 
-// ------------------------------
-// Chat UI handling
-// ------------------------------
+// ---------------------------
+// Chat UI Handling
+// ---------------------------
 async function sendMessage() {
   const userText = userInput.value.trim();
   if (!userText) return;
 
-  // Display user message
+  // Show user message
   const userMsg = document.createElement("div");
   userMsg.className = "message user";
   userMsg.innerText = userText;
   chatWindow.appendChild(userMsg);
 
-  // Typing indicator
+  // Show typing indicator
   const botMsg = document.createElement("div");
   botMsg.className = "message bot";
   botMsg.innerText = "🤖 MITHRA: typing...";
   chatWindow.appendChild(botMsg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 
-  // Get answer
+  // Get bot response
   const answer = await getAnswer(userText);
   botMsg.innerText = answer;
   chatWindow.scrollTop = chatWindow.scrollHeight;
@@ -598,9 +609,10 @@ async function sendMessage() {
   userInput.value = "";
 }
 
-// Event listeners
+// ---------------------------
+// Event Listeners
+// ---------------------------
 sendBtn.addEventListener("click", sendMessage);
-userInput.addEventListener("keypress", function (e) {
+userInput.addEventListener("keypress", function(e) {
   if (e.key === "Enter") sendMessage();
 });
-
